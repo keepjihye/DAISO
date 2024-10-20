@@ -3333,4 +3333,7 @@ input[type=checkbox] {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.goods-thumb-container .swiper-slide-active {
+  border: 1px solid #000;
 }/*# sourceMappingURL=style.css.map */
