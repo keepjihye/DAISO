@@ -2,26 +2,75 @@
     width: 570px;
     height: 878px;
 }
-.swiper {
-    width: 100%;
-    height: 703px;
-}
 
-.swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
+// img swiper
+.goods-thumb-swiper {
+    .swiper {
+        width: 100%;
+        height: 100%;
 
-.swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+        &:hover {
+            .swiper-button-next,
+            .swiper-button-prev {
+                opacity: 1;
+            }
+        }
+        .swiper-button-next,
+        .swiper-button-prev {
+            width: 50px;
+            height: 50px;
+            opacity: 0;
+            transition: 1s;
+        }
+        .swiper-button-next {
+            right: 0;
+        }
+
+        .swiper-button-prev {
+            left: 0;
+        }
+
+        .swiper-button-next::after,
+        .swiper-button-prev::after {
+            display: none;
+        }
+
+        .swiper-button-next::before,
+        .swiper-button-prev::before {
+            @include lineAwesome;
+            font-size: 3rem;
+            color: $white;
+            opacity: 0.6;
+            padding: 0 10px;
+        }
+        .swiper-button-prev::before {
+            background-color: $black;
+            content: "\f104";
+        }
+        .swiper-button-next::before {
+            background-color: $black;
+            content: "\f105";
+        }
+        .swiper-button-disabled {
+            display: none;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
 }
 
 .swiper-pagination__custom {
@@ -48,5 +97,68 @@
     font-weight: bold;
 }
 
-.swiper-pagination-total {
+.goods-thumb-container {
+    margin-top: 35px;
+    height: 143px;
+    width: 100%;
+    .swiper {
+        width: 100%;
+        height: 100%;
+        &:hover {
+            .swiper-button-next,
+            .swiper-button-prev {
+                opacity: 1;
+            }
+        }
+        .swiper-button-next,
+        .swiper-button-prev {
+            width: 40px;
+            height: 40px;
+            opacity: 0;
+            transition: 1s;
+        }
+        .swiper-button-next {
+            right: 0;
+        }
+
+        .swiper-button-prev {
+            left: 0;
+        }
+
+        .swiper-button-next::after,
+        .swiper-button-prev::after {
+            display: none;
+        }
+
+        .swiper-button-next::before,
+        .swiper-button-prev::before {
+            @include lineAwesome;
+            font-size: 2rem;
+            color: $white;
+            opacity: 0.6;
+            padding: 0 10px;
+        }
+        .swiper-button-prev::before {
+            background-color: $black;
+            content: "\f104";
+        }
+        .swiper-button-next::before {
+            background-color: $black;
+            content: "\f105";
+        }
+        .swiper-button-disabled {
+            display: none;
+        }
+    }
+    .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 }

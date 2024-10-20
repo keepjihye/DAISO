@@ -1,4 +1,4 @@
-var swiper = new Swiper(".mySwiper", {
+var swiper = new Swiper(".swiper__main", {
     spaceBetween: 30,
     centeredSlides: true,
     // autoplay: {
@@ -12,8 +12,15 @@ var swiper = new Swiper(".mySwiper", {
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
-
     },
-
 },
 );
+
+var swiper = new Swiper(".swiper__container", {
+    slidesPerView: 5,
+    spaceBetween: 8,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+});
