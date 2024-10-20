@@ -1,5 +1,52 @@
-.box {
-    height: 300px;
-    width: 300px;
-    background-color: red;
+.goods-thum-wrap {
+    width: 570px;
+    height: 878px;
+}
+.swiper {
+    width: 100%;
+    height: 703px;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper-pagination__custom {
+    position: absolute;
+    bottom: 30px;
+    left: 500px;
+    background-color: hsla(0, 0%, 7%, 0.4);
+    border-radius: 12px;
+    font-size: 12px;
+    padding: 4px 4px;
+    height: 30px;
+    width: auto;
+    color: $white;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    * {
+        padding: 5px;
+    }
+}
+
+.swiper-pagination-current {
+    font-weight: bold;
+}
+
+.swiper-pagination-total {
 }
