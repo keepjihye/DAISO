@@ -3183,7 +3183,7 @@ input[type=checkbox] {
 
 .goods-thumb-wrap {
   width: 570px;
-  height: 878px;
+  height: 100%;
 }
 
 .goods-thumb-swiper {
@@ -3194,9 +3194,6 @@ input[type=checkbox] {
   height: 100%;
 }
 .goods-thumb-swiper .swiper .swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
   display: flex;
   justify-content: center;
   align-items: center;

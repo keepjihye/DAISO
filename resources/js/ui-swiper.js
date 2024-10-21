@@ -1,5 +1,5 @@
-
-var swiper = new Swiper(".mySwiper", {
+// swiper__container
+var swiper = new Swiper(".swiper__container", {
     spaceBetween: 10,
     slidesPerView: 5,
     freeMode: true,
@@ -8,9 +8,10 @@ var swiper = new Swiper(".mySwiper", {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
-
 });
-var swiper2 = new Swiper(".mySwiper2", {
+
+// swiper__main
+var swiper2 = new Swiper(".swiper__main", {
     spaceBetween: 10,
     navigation: {
         nextEl: ".swiper-button-next",
