@@ -3181,55 +3181,17 @@ input[type=checkbox] {
   }
 }
 
-.goods-thum-wrap {
+.goods-thumb-wrap {
   width: 570px;
   height: 878px;
 }
 
+.goods-thumb-swiper {
+  position: relative;
+}
 .goods-thumb-swiper .swiper {
   width: 100%;
   height: 100%;
-}
-.goods-thumb-swiper .swiper:hover .swiper-button-next,
-.goods-thumb-swiper .swiper:hover .swiper-button-prev {
-  opacity: 1;
-}
-.goods-thumb-swiper .swiper .swiper-button-next,
-.goods-thumb-swiper .swiper .swiper-button-prev {
-  width: 50px;
-  height: 50px;
-  opacity: 0;
-  transition: 1s;
-}
-.goods-thumb-swiper .swiper .swiper-button-next {
-  right: 0;
-}
-.goods-thumb-swiper .swiper .swiper-button-prev {
-  left: 0;
-}
-.goods-thumb-swiper .swiper .swiper-button-next::after,
-.goods-thumb-swiper .swiper .swiper-button-prev::after {
-  display: none;
-}
-.goods-thumb-swiper .swiper .swiper-button-next::before,
-.goods-thumb-swiper .swiper .swiper-button-prev::before {
-  font-family: "Line Awesome Free";
-  font-weight: 900;
-  font-size: 3rem;
-  color: #fff;
-  opacity: 0.6;
-  padding: 0 10px;
-}
-.goods-thumb-swiper .swiper .swiper-button-prev::before {
-  background-color: #000;
-  content: "\f104";
-}
-.goods-thumb-swiper .swiper .swiper-button-next::before {
-  background-color: #000;
-  content: "\f105";
-}
-.goods-thumb-swiper .swiper .swiper-button-disabled {
-  display: none;
 }
 .goods-thumb-swiper .swiper .swiper-slide {
   text-align: center;
@@ -3244,13 +3206,58 @@ input[type=checkbox] {
   display: block;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+}
+.goods-thumb-swiper:hover .swiper-button-next,
+.goods-thumb-swiper:hover .swiper-button-prev {
+  opacity: 1;
+}
+.goods-thumb-swiper .swiper-button-next,
+.goods-thumb-swiper .swiper-button-prev {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+  transition: 0.9s;
+}
+.goods-thumb-swiper .swiper-button-next {
+  right: 0;
+  top: 350px;
+}
+.goods-thumb-swiper .swiper-button-prev {
+  left: 0;
+  top: 350px;
+}
+.goods-thumb-swiper .swiper-button-next::after,
+.goods-thumb-swiper .swiper-button-prev::after {
+  display: none;
+}
+.goods-thumb-swiper .swiper-button-prev::before {
+  background-color: #2d2d2d;
+  content: "\f104";
+}
+.goods-thumb-swiper .swiper-button-next::before {
+  background-color: #2d2d2d;
+  content: "\f105";
+}
+.goods-thumb-swiper .swiper-button-disabled {
+  display: none;
+}
+.goods-thumb-swiper .swiper-button-next::before,
+.goods-thumb-swiper .swiper-button-prev::before {
+  font-family: "Line Awesome Free";
+  font-weight: 900;
+  font-size: 3rem;
+  color: #fff;
+  opacity: 0.6;
+  padding: 0 10px;
+}
+.goods-thumb-swiper .swiper-slide-thumb-active {
+  border: 1px solid #000;
 }
 
 .swiper-pagination__custom {
   position: absolute;
-  bottom: 30px;
+  top: 700px;
   left: 500px;
   background-color: hsla(0, 0%, 7%, 0.4);
   border-radius: 12px;
@@ -3273,6 +3280,7 @@ input[type=checkbox] {
 }
 
 .goods-thumb-container {
+  position: relative;
   margin-top: 35px;
   height: 143px;
   width: 100%;
@@ -3280,47 +3288,6 @@ input[type=checkbox] {
 .goods-thumb-container .swiper {
   width: 100%;
   height: 100%;
-}
-.goods-thumb-container .swiper:hover .swiper-button-next,
-.goods-thumb-container .swiper:hover .swiper-button-prev {
-  opacity: 1;
-}
-.goods-thumb-container .swiper .swiper-button-next,
-.goods-thumb-container .swiper .swiper-button-prev {
-  width: 40px;
-  height: 40px;
-  opacity: 0;
-  transition: 1s;
-}
-.goods-thumb-container .swiper .swiper-button-next {
-  right: 0;
-}
-.goods-thumb-container .swiper .swiper-button-prev {
-  left: 0;
-}
-.goods-thumb-container .swiper .swiper-button-next::after,
-.goods-thumb-container .swiper .swiper-button-prev::after {
-  display: none;
-}
-.goods-thumb-container .swiper .swiper-button-next::before,
-.goods-thumb-container .swiper .swiper-button-prev::before {
-  font-family: "Line Awesome Free";
-  font-weight: 900;
-  font-size: 2rem;
-  color: #fff;
-  opacity: 0.6;
-  padding: 0 10px;
-}
-.goods-thumb-container .swiper .swiper-button-prev::before {
-  background-color: #000;
-  content: "\f104";
-}
-.goods-thumb-container .swiper .swiper-button-next::before {
-  background-color: #000;
-  content: "\f105";
-}
-.goods-thumb-container .swiper .swiper-button-disabled {
-  display: none;
 }
 .goods-thumb-container .swiper-slide {
   display: flex;
@@ -3331,9 +3298,51 @@ input[type=checkbox] {
   display: block;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
-.goods-thumb-container .swiper-slide-active {
+.goods-thumb-container:hover .swiper-button-next,
+.goods-thumb-container:hover .swiper-button-prev {
+  opacity: 1;
+}
+.goods-thumb-container .swiper-button-next,
+.goods-thumb-container .swiper-button-prev {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  opacity: 0;
+  transition: 0.9s;
+}
+.goods-thumb-container .swiper-button-next {
+  right: 0;
+  top: 70px;
+}
+.goods-thumb-container .swiper-button-prev {
+  left: 0;
+  top: 70px;
+}
+.goods-thumb-container .swiper-button-next::after,
+.goods-thumb-container .swiper-button-prev::after {
+  display: none;
+}
+.goods-thumb-container .swiper-button-prev::before {
+  background-color: #2d2d2d;
+  content: "\f104";
+}
+.goods-thumb-container .swiper-button-next::before {
+  background-color: #2d2d2d;
+  content: "\f105";
+}
+.goods-thumb-container .swiper-button-disabled {
+  display: none;
+}
+.goods-thumb-container .swiper-button-next::before,
+.goods-thumb-container .swiper-button-prev::before {
+  font-family: "Line Awesome Free";
+  font-weight: 900;
+  font-size: 2rem;
+  color: #fff;
+  opacity: 0.6;
+  padding: 0 5px;
+}
+.goods-thumb-container .swiper-slide-thumb-active {
   border: 1px solid #000;
 }/*# sourceMappingURL=style.css.map */
