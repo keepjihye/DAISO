@@ -33,12 +33,7 @@ var swiperMain = new Swiper(".swiper__main", {
             }, 50); // 살짝의 딜레이 추가
         }
     }
-
-
-
-
-},
-);
+},);
 
 var swiperCon = new Swiper(".swiper__container", {
     slidesPerView: 5,
@@ -61,19 +56,17 @@ var swiperCon = new Swiper(".swiper__container", {
             }, 50); // 살짝의 딜레이 추가
             // 현재 활성 인덱스 출력
             // 모든 슬라이드의 border를 초기화
-            $('.swiper__container .swiper-slide').css('border', 'none');
+            // $('.swiper__container .swiper-slide').css('border', 'none');
 
-            // 현재 activeIndex에 해당하는 슬라이드에만 border 적용
-            let activeIndex = swiperCon.activeIndex;
+            // // 현재 activeIndex에 해당하는 슬라이드에만 border 적용
+            // let activeIndex = swiperCon.activeIndex;
 
-            // 3번째 슬라이드 인덱스 2에 border 적용
-            if (activeIndex >= 0 && activeIndex < $('.swiper__container .swiper-slide').length) {
-                $('.swiper__container .swiper-slide').eq(activeIndex).css('border', '1px solid black');
-            }
+            // // 3번째 슬라이드 인덱스 2에 border 적용
+            // if (activeIndex >= 0 && activeIndex < $('.swiper__container .swiper-slide').length) {
+            //     $('.swiper__container .swiper-slide').eq(activeIndex).css('border', '1px solid black');
+            // }
         }
     }
-
-
 });
 
 // swiper main, container 연동하기
