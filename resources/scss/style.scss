@@ -1,2 +1,83 @@
-@import "component/include";
-@import "pattern/p_include";
+@import 'component/include';
+@import 'pattern/p_include';
+
+.body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.goods-thumb-wrap {
+    width: 80%;
+    max-width: 800px;
+    height: 400px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.goods-thumb-swiper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.goods-thumb-button-next,
+.goods-thumb-button-prev {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    z-index: 10;
+    cursor: pointer;
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+}
+
+.goods-thumb-button-next {
+    right: 10px;
+}
+
+.goods-thumb-button-prev {
+    left: 10px;
+}
+
+.goods-thumb-pagination {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+}
+
+.goods-thumb-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background-color: #333;
+    border-radius: 50%;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+
+    &-active {
+        opacity: 1;
+    }
+}
+
+.content-section {
+    width: 1280px;
+    height: 1108px;
+    background: powderblue;
+}
