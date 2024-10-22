@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <!-- line awesome -->
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../resources/css/style.css">
+
+
+</head>
+
+<body>
+    <div id="wrap">
+        <div class="inner">
+            <div class="goods-thumb-wrap">
+                <!-- Swiper -->
+                <div class="goods-thumb-swiper">
+                    <div class="swiper mySwiper2 swiper__main">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="https://cdn.daisomall.co.kr/file/PD/20231129/X6HfMTujh7a6KdCKFCXS1036271_00_00X6HfMTujh7a6KdCKFCXS.jpg/dims/resize/600/quality/95"
+                                    alt="product1">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://cdn.daisomall.co.kr/file/PD/20231129/t0Zk91AjVgklVeJjwpkp1036271_00_01t0Zk91AjVgklVeJjwpkp.jpg/dims/resize/600/quality/95"
+                                    alt="product2">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://cdn.daisomall.co.kr/file/PD/20231129/Cbn1aNIxhJRn6aWUDh7h1036271_00_02Cbn1aNIxhJRn6aWUDh7h.jpg/dims/resize/600/quality/95"
+                                    alt="product3">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination swiper-pagination__custom"></div>
+                </div>
+                <!-- container -->
+                <div class="goods-thumb-container">
+                    <div class="swiper mySwiper swiper__container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="https://cdn.daisomall.co.kr/file/PD/20231129/X6HfMTujh7a6KdCKFCXS1036271_00_00X6HfMTujh7a6KdCKFCXS.jpg/dims/resize/600/quality/95"
+                                    alt="product1">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://cdn.daisomall.co.kr/file/PD/20231129/t0Zk91AjVgklVeJjwpkp1036271_00_01t0Zk91AjVgklVeJjwpkp.jpg/dims/resize/600/quality/95"
+                                    alt="product2">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://cdn.daisomall.co.kr/file/PD/20231129/Cbn1aNIxhJRn6aWUDh7h1036271_00_02Cbn1aNIxhJRn6aWUDh7h.jpg/dims/resize/600/quality/95"
+                                    alt="product3">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 10,
+            slidesPerView: 5,
+            freeMode: true,
+            watchSlidesProgress: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+
+        });
+        var swiper2 = new Swiper(".mySwiper2", {
+            spaceBetween: 10,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            thumbs: {
+                swiper: swiper,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                type: "fraction",
+                renderFraction: function (currentClass, totalClass) {
+                    return '<span class="' + currentClass + '"></span> | <span class="' + totalClass + '"></span>';
+                }
+            },
+        });
+    </script>
+</body>
+
+</html>
