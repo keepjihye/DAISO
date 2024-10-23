@@ -3170,7 +3170,11 @@ input[type=checkbox] {
 
 .inner {
   width: 100%;
+<<<<<<< HEAD
   max-width: 1920px;
+=======
+  max-width: 1340px;
+>>>>>>> 79caf527072f662c5eba55f35670d9629e40d772
   height: 100%;
   padding: 0 20px;
   margin: 0 auto;
@@ -3186,6 +3190,15 @@ input[type=checkbox] {
   height: 100%;
 }
 
+<<<<<<< HEAD
+=======
+.box {
+  height: 300px;
+  width: 300px;
+  background-color: red;
+}
+
+>>>>>>> 79caf527072f662c5eba55f35670d9629e40d772
 .goods-thumb-swiper {
   position: relative;
 }
