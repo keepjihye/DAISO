@@ -3192,25 +3192,12 @@ body {
   height: 100%;
 }
 
-body {
-  background: #eee;
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  color: #000;
-  margin: 0;
-  padding: 0;
-}
-
 .swiper {
   width: 100%;
   height: 100%;
 }
 
 .swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -3221,11 +3208,6 @@ body {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-}
-
-body {
-  background: #000;
-  color: #000;
 }
 
 .swiper {
@@ -3261,10 +3243,55 @@ body {
   opacity: 1;
 }
 
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+.goods-thumb-swiper .swiper-button-next {
+  background: gray;
+  width: 48px;
+  height: 48px;
+}
+.goods-thumb-swiper .swiper-button-next::after {
+  display: none;
+}
+.goods-thumb-swiper .swiper-button-next::before {
+  font-family: "Line Awesome Free";
+  font-weight: 900;
+  content: "\f105";
+  color: white;
+  font-size: 2.75rem;
+}
+
+.goods-thumb-swiper .swiper-button-prev {
+  background: gray;
+  width: 48px;
+  height: 48px;
+}
+.goods-thumb-swiper .swiper-button-prev::after {
+  display: none;
+}
+.goods-thumb-swiper .swiper-button-prev::before {
+  font-family: "Line Awesome Free";
+  font-weight: 900;
+  content: "\f104";
+  color: white;
+  font-size: 2.75rem;
+}
+
+.goods-thumb-wrap {
+  position: relative;
+}
+.goods-thumb-wrap .swiper-button-next {
+  position: absolute;
+  top: 350px;
+  right: 0;
+}
+.goods-thumb-wrap .swiper-button-prev {
+  position: absolute;
+  top: 350px;
+  left: 0;
+}
+
+.goods-thumb-container .swiper-button-next {
+  display: none;
+}
+.goods-thumb-container .swiper-button-prev {
+  display: none;
 }/*# sourceMappingURL=style.css.map */
