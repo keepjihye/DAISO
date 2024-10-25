@@ -60,7 +60,13 @@ body {
 }
 
 .goods-thumb-swiper {
+    position: relative;
     .swiper-button-next {
+        position: absolute;
+        top: 350px;
+        right: 0;
+        opacity: 0;
+        transition: 0.8s;
         background: gray;
         width: 48px;
         height: 48px;
@@ -74,10 +80,12 @@ body {
             font-size: 2.75rem;
         }
     }
-}
-
-.goods-thumb-swiper {
     .swiper-button-prev {
+        position: absolute;
+        top: 350px;
+        left: 0;
+        opacity: 0;
+        transition: 0.8s;
         background: gray;
         width: 48px;
         height: 48px;
@@ -91,19 +99,13 @@ body {
             font-size: 2.75rem;
         }
     }
-}
-
-.goods-thumb-wrap {
-    position: relative;
-    .swiper-button-next {
-        position: absolute;
-        top: 350px;
-        right: 0;
-    }
-    .swiper-button-prev {
-        position: absolute;
-        top: 350px;
-        left: 0;
+    &:hover {
+        .swiper-button-next {
+            opacity: 1;
+        }
+        .swiper-button-prev {
+            opacity: 1;
+        }
     }
 }
 
