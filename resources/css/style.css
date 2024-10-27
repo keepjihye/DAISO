@@ -3184,6 +3184,7 @@ input[type=checkbox] {
 .goods-thumb-wrap {
   width: 570px;
   height: 100%;
+  font-weight: 400;
 }
 
 html,
@@ -3298,4 +3299,10 @@ body {
 }
 .goods-thumb-container .swiper-button-prev {
   display: none;
+}
+
+.crumbs {
+  max-width: 100%;
+  margin-top: 14px;
+  color: #646f7c;
 }/*# sourceMappingURL=style.css.map */
