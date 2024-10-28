@@ -2,7 +2,7 @@
 .goods-thumb-swiper {
     position: relative;
     .swiper {
-        width: 100%;
+        width: 50%;
         height: 100%;
 
         .swiper-slide {
@@ -50,12 +50,13 @@
     }
     .swiper-button-prev::before {
         background-color: $gray-80;
-        content: "\f104";
+        content: '\f104';
     }
     .swiper-button-next::before {
         background-color: $gray-80;
-        content: "\f105";
+        content: '\f105';
     }
+
     .swiper-button-disabled {
         display: none;
     }
@@ -149,11 +150,11 @@
     }
     .swiper-button-prev::before {
         background-color: $gray-80;
-        content: "\f104";
+        content: '\f104';
     }
     .swiper-button-next::before {
         background-color: $gray-80;
-        content: "\f105";
+        content: '\f105';
     }
     .swiper-button-disabled {
         display: none;
