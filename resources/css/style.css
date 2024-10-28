@@ -3181,10 +3181,72 @@ input[type=checkbox] {
   }
 }
 
+.crumbs {
+  width: 100%;
+  margin-top: 14px;
+  color: #646f7c;
+}
+
+.page-tit-area {
+  display: flex;
+  align-items: stretch;
+}
+
 .goods-thumb-wrap {
   width: 570px;
   height: 100%;
   font-weight: 400;
+}
+
+.goods-detail {
+  align-self: flex-start;
+  background: darkseagreen;
+  display: block;
+  width: calc(100% - 570px);
+  overflow: visible;
+  padding-left: 80px;
+}
+.goods-detail .goods-price {
+  height: 46.79px;
+  margin: 8px 0 0;
+  position: relative;
+}
+@font-face {
+  font-family: "Paperlogy-8ExtraBold";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+}
+.goods-detail .goods-price .goods-price__value {
+  font-size: 32px;
+  font-weight: bolder;
+}
+.goods-detail .goods-price .goods-price-won {
+  font-size: 28px;
+}
+.goods-detail .goods-price .share_btn::after {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  content: "";
+  background-image: url(https://cdn.daisomall.co.kr/apps/f/c7ed989e2/img/ico_prod_share.539caf2.svg);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 100% auto;
+  display: block;
+  width: 32px;
+  height: 32px;
+}
+.goods-detail .goods-tit {
+  font-size: 24px;
+  margin: 12px 0 0;
+}
+.goods-detail .guide-benefit {
+  margin-top: 32px;
+  position: relative;
+}
+.goods-detail .guide-benefit .guide__tit {
+  line-height: 21px;
 }
 
 html,
@@ -3299,10 +3361,4 @@ body {
 }
 .goods-thumb-container .swiper-button-prev {
   display: none;
-}
-
-.crumbs {
-  max-width: 100%;
-  margin-top: 14px;
-  color: #646f7c;
 }/*# sourceMappingURL=style.css.map */
