@@ -6,9 +6,9 @@
     // content를 1280px로 만들기 위함
     padding: 0 $p-mobile;
     margin: 0 auto;
-    @include tabletMore {
-        padding: 0 $p-tablet;
-    }
+    // @include tabletMore {
+    //     padding: 0 $p-tablet;
+    // }
 }
 
 .crumbs {
@@ -18,9 +18,9 @@
 }
 
 .page-tit-area {
-    // width: 100%;
-    // max-height: 1066.89px;
-    // height: 100%;
+    width: 100%;
+    max-height: 1066.89px;
+    height: 100%;
     display: flex;
     align-items: stretch;
 }
@@ -49,7 +49,7 @@
         .goods-price-won {
             font-size: 28px;
         }
-        .share_btn::after {
+        .share_btn::before {
             position: absolute;
             right: 0;
             top: 50%;
@@ -72,6 +72,49 @@
         position: relative;
         .guide__tit {
             line-height: 21px;
+        }
+        .el-collapse-item {
+            font-size: 16px;
+            .el-collapse-item__wrap1 {
+                position: relative;
+                font-size: 16px;
+                padding: 16px 0;
+                .ico-wrap {
+                    width: 20px;
+                    height: 20px;
+                    margin-right: 16px;
+                }
+                .acco-tit em {
+                    color: #067dfd;
+                }
+                .el-collapse-item__arrow {
+                    &::before {
+                        position: absolute;
+                        right: 0;
+                        content: '\f107';
+                        font-family: 'Line Awesome Free';
+                        font-weight: 900;
+                    }
+                }
+            }
+            .el-collapse-item__wrap2 {
+                position: relative;
+                font-size: 16px;
+                padding: 16px 0;
+                color: #646f7c;
+                padding: 24px 36px;
+                .txt-list li:before {
+                    display: block;
+                    background: #646f7c;
+                    border-radius: 50%;
+                    content: '';
+                    width: 4px;
+                    height: 4px;
+                    position: absolute;
+                    top: 35px;
+                    left: 25px;
+                }
+            }
         }
     }
 }

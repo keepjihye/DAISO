@@ -3168,17 +3168,19 @@ input[type=checkbox] {
   border-width: 2px;
 }
 
+.detail-benefit .ico-wrap,
+.detail-delivery .ico-wrap {
+  height: 20px;
+  margin-right: 16px;
+  width: 20px;
+}
+
 .inner {
   width: 100%;
   max-width: 1920px;
   height: 100%;
   padding: 0 20px;
   margin: 0 auto;
-}
-@media (min-width: 1024px) {
-  .inner {
-    padding: 0 320px;
-  }
 }
 
 .crumbs {
@@ -3188,6 +3190,9 @@ input[type=checkbox] {
 }
 
 .page-tit-area {
+  width: 100%;
+  max-height: 1066.89px;
+  height: 100%;
   display: flex;
   align-items: stretch;
 }
@@ -3211,12 +3216,6 @@ input[type=checkbox] {
   margin: 8px 0 0;
   position: relative;
 }
-@font-face {
-  font-family: "Paperlogy-8ExtraBold";
-  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2") format("woff2");
-  font-weight: 800;
-  font-style: normal;
-}
 .goods-detail .goods-price .goods-price__value {
   font-size: 32px;
   font-weight: bolder;
@@ -3224,7 +3223,7 @@ input[type=checkbox] {
 .goods-detail .goods-price .goods-price-won {
   font-size: 28px;
 }
-.goods-detail .goods-price .share_btn::after {
+.goods-detail .goods-price .share_btn::before {
   position: absolute;
   right: 0;
   top: 50%;
@@ -3247,6 +3246,47 @@ input[type=checkbox] {
 }
 .goods-detail .guide-benefit .guide__tit {
   line-height: 21px;
+}
+.goods-detail .guide-benefit .el-collapse-item {
+  font-size: 16px;
+}
+.goods-detail .guide-benefit .el-collapse-item .el-collapse-item__wrap1 {
+  position: relative;
+  font-size: 16px;
+  padding: 16px 0;
+}
+.goods-detail .guide-benefit .el-collapse-item .el-collapse-item__wrap1 .ico-wrap {
+  width: 20px;
+  height: 20px;
+  margin-right: 16px;
+}
+.goods-detail .guide-benefit .el-collapse-item .el-collapse-item__wrap1 .acco-tit em {
+  color: #067dfd;
+}
+.goods-detail .guide-benefit .el-collapse-item .el-collapse-item__wrap1 .el-collapse-item__arrow::before {
+  position: absolute;
+  right: 0;
+  content: "\f107";
+  font-family: "Line Awesome Free";
+  font-weight: 900;
+}
+.goods-detail .guide-benefit .el-collapse-item .el-collapse-item__wrap2 {
+  position: relative;
+  font-size: 16px;
+  padding: 16px 0;
+  color: #646f7c;
+  padding: 24px 36px;
+}
+.goods-detail .guide-benefit .el-collapse-item .el-collapse-item__wrap2 .txt-list li:before {
+  display: block;
+  background: #646f7c;
+  border-radius: 50%;
+  content: "";
+  width: 4px;
+  height: 4px;
+  position: absolute;
+  top: 35px;
+  left: 25px;
 }
 
 html,
