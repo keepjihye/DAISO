@@ -23,97 +23,136 @@
     height: 100%;
     display: flex;
     align-items: stretch;
-}
-
-.goods-thumb-wrap {
-    width: 570px;
-    height: 100%;
-    font-weight: 400;
+    .goods-thumb-wrap {
+        width: 570px;
+        height: 100%;
+        font-weight: 400;
+    }
 }
 
 .goods-detail {
     align-self: flex-start;
-    background: darkseagreen;
+    // background: darkseagreen;
     display: block;
     width: calc(100% - 570px);
     overflow: visible;
     padding-left: 80px;
-    .goods-price {
-        height: 46.79px;
-        margin: (8px 0 0);
-        position: relative;
-        .goods-price__value {
-            font-size: 32px;
-            font-weight: bolder;
-        }
-        .goods-price-won {
-            font-size: 28px;
-        }
-        .share_btn::before {
-            position: absolute;
-            right: 0;
-            top: 50%;
-            content: '';
-            background-image: url(https://cdn.daisomall.co.kr/apps/f/c7ed989e2/img/ico_prod_share.539caf2.svg);
-            background-repeat: no-repeat;
-            background-position: 50%;
-            background-size: 100% auto;
-            display: block;
-            width: 32px;
-            height: 32px;
-        }
+}
+
+.goods-tit {
+    font-size: 24px;
+    margin: 12px 0 0;
+}
+
+.goods-price {
+    height: 46.79px;
+    margin: (8px 0 0);
+    position: relative;
+    .goods-price__value {
+        font-size: 32px;
+        font-weight: bolder;
     }
-    .goods-tit {
-        font-size: 24px;
-        margin: 12px 0 0;
+    .goods-price-won {
+        font-size: 28px;
     }
-    .guide-benefit {
-        margin-top: 32px;
+    .share_btn::before {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        content: '';
+        background-image: url(https://cdn.daisomall.co.kr/apps/f/c7ed989e2/img/ico_prod_share.539caf2.svg);
+        background-repeat: no-repeat;
+        background-position: 50%;
+        background-size: 100% auto;
+        display: block;
+        width: 32px;
+        height: 32px;
+    }
+}
+
+.guide-benefit {
+    margin-top: 32px;
+    position: relative;
+    .guide__tit {
+        line-height: 21px;
+    }
+    .el-collapse-item {
+        font-size: 16px;
         position: relative;
-        .guide__tit {
-            line-height: 21px;
+        padding: 16px 0;
+        .ico-wrap {
+            width: 20px;
+            height: 20px;
+            margin-right: 16px;
         }
-        .el-collapse-item {
-            font-size: 16px;
-            .el-collapse-item__wrap1 {
-                position: relative;
-                font-size: 16px;
-                padding: 16px 0;
-                .ico-wrap {
-                    width: 20px;
-                    height: 20px;
-                    margin-right: 16px;
-                }
-                .acco-tit em {
-                    color: #067dfd;
-                }
-                .el-collapse-item__arrow {
-                    &::before {
-                        position: absolute;
-                        right: 0;
-                        content: '\f107';
-                        font-family: 'Line Awesome Free';
-                        font-weight: 900;
-                    }
-                }
+        .acco-tit em {
+            color: #067dfd;
+        }
+        .el-collapse-item__arrow {
+            &::before {
+                position: absolute;
+                right: 0;
+                content: '\f107';
+                font-family: 'Line Awesome Free';
+                font-weight: 900;
             }
-            .el-collapse-item__wrap2 {
-                position: relative;
-                font-size: 16px;
-                padding: 16px 0;
-                color: #646f7c;
-                padding: 24px 36px;
-                .txt-list li:before {
-                    display: block;
-                    background: #646f7c;
-                    border-radius: 50%;
-                    content: '';
-                    width: 4px;
-                    height: 4px;
-                    position: absolute;
-                    top: 35px;
-                    left: 25px;
-                }
+        }
+        .el-collapse-item__wrap {
+            position: relative;
+            font-size: 16px;
+            padding: 16px 0;
+            color: #646f7c;
+            padding: 24px 36px;
+            .txt-list li:before {
+                display: block;
+                background: #646f7c;
+                border-radius: 50%;
+                content: '';
+                width: 4px;
+                height: 4px;
+                position: absolute;
+                top: 35px;
+                left: 25px;
+            }
+        }
+    }
+    .el-collapse-item__header {
+        font-size: 16px;
+        position: relative;
+        padding: 16px 0;
+        .ico-wrap {
+            width: 20px;
+            height: 20px;
+            margin-right: 16px;
+        }
+        .el-collapse-item__arrow {
+            &::before {
+                position: absolute;
+                right: 0;
+                content: '\f107';
+                font-family: 'Line Awesome Free';
+                font-weight: 900;
+            }
+        }
+        .el-collapse-item__wrap {
+            position: relative;
+            font-size: 16px;
+            padding: 16px 0;
+            color: #646f7c;
+            padding: 24px 36px;
+            .list-ty-bullet li:before {
+                display: block;
+                background: #646f7c;
+                border-radius: 50%;
+                content: '';
+                width: 4px;
+                height: 4px;
+                position: absolute;
+                top: 35px;
+                left: 25px;
+            }
+            .inner-list a {
+                color: #067dfd;
             }
         }
     }

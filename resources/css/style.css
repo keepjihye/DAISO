@@ -3196,8 +3196,7 @@ input[type=checkbox] {
   display: flex;
   align-items: stretch;
 }
-
-.goods-thumb-wrap {
+.page-tit-area .goods-thumb-wrap {
   width: 570px;
   height: 100%;
   font-weight: 400;
@@ -3205,25 +3204,30 @@ input[type=checkbox] {
 
 .goods-detail {
   align-self: flex-start;
-  background: darkseagreen;
   display: block;
   width: calc(100% - 570px);
   overflow: visible;
   padding-left: 80px;
 }
-.goods-detail .goods-price {
+
+.goods-tit {
+  font-size: 24px;
+  margin: 12px 0 0;
+}
+
+.goods-price {
   height: 46.79px;
   margin: 8px 0 0;
   position: relative;
 }
-.goods-detail .goods-price .goods-price__value {
+.goods-price .goods-price__value {
   font-size: 32px;
   font-weight: bolder;
 }
-.goods-detail .goods-price .goods-price-won {
+.goods-price .goods-price-won {
   font-size: 28px;
 }
-.goods-detail .goods-price .share_btn::before {
+.goods-price .share_btn::before {
   position: absolute;
   right: 0;
   top: 50%;
@@ -3236,48 +3240,42 @@ input[type=checkbox] {
   width: 32px;
   height: 32px;
 }
-.goods-detail .goods-tit {
-  font-size: 24px;
-  margin: 12px 0 0;
-}
-.goods-detail .guide-benefit {
+
+.guide-benefit {
   margin-top: 32px;
   position: relative;
 }
-.goods-detail .guide-benefit .guide__tit {
+.guide-benefit .guide__tit {
   line-height: 21px;
 }
-.goods-detail .guide-benefit .el-collapse-item {
+.guide-benefit .el-collapse-item {
   font-size: 16px;
-}
-.goods-detail .guide-benefit .el-collapse-item .el-collapse-item__wrap1 {
   position: relative;
-  font-size: 16px;
   padding: 16px 0;
 }
-.goods-detail .guide-benefit .el-collapse-item .el-collapse-item__wrap1 .ico-wrap {
+.guide-benefit .el-collapse-item .ico-wrap {
   width: 20px;
   height: 20px;
   margin-right: 16px;
 }
-.goods-detail .guide-benefit .el-collapse-item .el-collapse-item__wrap1 .acco-tit em {
+.guide-benefit .el-collapse-item .acco-tit em {
   color: #067dfd;
 }
-.goods-detail .guide-benefit .el-collapse-item .el-collapse-item__wrap1 .el-collapse-item__arrow::before {
+.guide-benefit .el-collapse-item .el-collapse-item__arrow::before {
   position: absolute;
   right: 0;
   content: "\f107";
   font-family: "Line Awesome Free";
   font-weight: 900;
 }
-.goods-detail .guide-benefit .el-collapse-item .el-collapse-item__wrap2 {
+.guide-benefit .el-collapse-item .el-collapse-item__wrap {
   position: relative;
   font-size: 16px;
   padding: 16px 0;
   color: #646f7c;
   padding: 24px 36px;
 }
-.goods-detail .guide-benefit .el-collapse-item .el-collapse-item__wrap2 .txt-list li:before {
+.guide-benefit .el-collapse-item .el-collapse-item__wrap .txt-list li:before {
   display: block;
   background: #646f7c;
   border-radius: 50%;
@@ -3287,6 +3285,44 @@ input[type=checkbox] {
   position: absolute;
   top: 35px;
   left: 25px;
+}
+.guide-benefit .el-collapse-item__header {
+  font-size: 16px;
+  position: relative;
+  padding: 16px 0;
+}
+.guide-benefit .el-collapse-item__header .ico-wrap {
+  width: 20px;
+  height: 20px;
+  margin-right: 16px;
+}
+.guide-benefit .el-collapse-item__header .el-collapse-item__arrow::before {
+  position: absolute;
+  right: 0;
+  content: "\f107";
+  font-family: "Line Awesome Free";
+  font-weight: 900;
+}
+.guide-benefit .el-collapse-item__header .el-collapse-item__wrap {
+  position: relative;
+  font-size: 16px;
+  padding: 16px 0;
+  color: #646f7c;
+  padding: 24px 36px;
+}
+.guide-benefit .el-collapse-item__header .el-collapse-item__wrap .list-ty-bullet li:before {
+  display: block;
+  background: #646f7c;
+  border-radius: 50%;
+  content: "";
+  width: 4px;
+  height: 4px;
+  position: absolute;
+  top: 35px;
+  left: 25px;
+}
+.guide-benefit .el-collapse-item__header .el-collapse-item__wrap .inner-list a {
+  color: #067dfd;
 }
 
 html,
