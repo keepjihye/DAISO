@@ -3177,10 +3177,14 @@ input[type=checkbox] {
 
 .inner {
   width: 100%;
-  max-width: 1920px;
   height: 100%;
   padding: 0 320px;
   margin: 0 auto;
+}
+
+.content-section {
+  height: 100%;
+  min-width: 1280px;
 }
 
 .crumbs {

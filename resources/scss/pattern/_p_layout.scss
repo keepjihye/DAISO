@@ -1,11 +1,15 @@
 // 그리드
 .inner {
     width: 100%;
-    max-width: $grid;
     height: 100%;
-    // content를 1280px로 만들기 위함
     padding: 0 $p-tablet;
     margin: 0 auto;
+}
+
+.content-section {
+    height: 100%;
+    // width: 100%;
+    min-width: 1280px;
 }
 
 .crumbs {
