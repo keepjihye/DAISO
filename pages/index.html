@@ -1,305 +1,674 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <!-- 상품 상세페이지 -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DAISO - product</title>
-    <!-- swiper -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <!-- line awesome -->
-    <link
-      rel="stylesheet"
-      href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
-    />
-    <!-- css -->
-    <link rel="stylesheet" href="../resources/css/style.css" />
-    <!-- jquery CDN -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <!-- GSAP -->
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-    <!-- js -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script defer src="../resources/js/main.js"></script>
-    <script defer src="../resources/js/ui-swiper.js"></script>
-  </head>
+    <head>
+        <!-- 상품 상세페이지 -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>DAISO - product</title>
+        <!-- swiper -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <!-- line awesome -->
+        <link
+            rel="stylesheet"
+            href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
+        />
+        <!-- css -->
+        <link rel="stylesheet" href="../resources/css/style.css" />
+        <!-- jquery CDN -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <!-- GSAP -->
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+        <!-- js -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script defer src="../resources/js/main.js"></script>
+        <script defer src="../resources/js/ui-swiper.js"></script>
+    </head>
 
-  <body>
-    <!-- 24.10.18 이미지 스와이어 만들어보기 -->
-    <!-- 변수명은 그대로 사용 / 추가적인 변수는 자유지만 [부모클래스명__변수명] 규칙지키기 -->
-    <div id="wrap">
-      <div class="inner">
-        <!-- Swiper -->
-        <div class="goods-thumb-wrap">
-          <!-- 상품 이미지 스와이퍼 -->
-          <!-- swiper__main -->
-          <div class="goods-thumb-swiper">
-            <div class="swiper mySwiper2 swiper__main">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <img
-                    src="https://cdn.daisomall.co.kr/file/PD/20231129/X6HfMTujh7a6KdCKFCXS1036271_00_00X6HfMTujh7a6KdCKFCXS.jpg/dims/resize/600/quality/95"
-                    alt="product1"
-                  />
+    <body>
+        <!-- 24.10.18 이미지 스와이어 만들어보기 -->
+        <!-- 변수명은 그대로 사용 / 추가적인 변수는 자유지만 [부모클래스명__변수명] 규칙지키기 -->
+        <div id="wrap">
+            <div class="inner">
+                <!-- Swiper -->
+                <div class="goods-thumb-wrap">
+                    <!-- 상품 이미지 스와이퍼 -->
+                    <!-- swiper__main -->
+                    <div class="goods-thumb-swiper">
+                        <div class="swiper mySwiper2 swiper__main">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img
+                                        src="https://cdn.daisomall.co.kr/file/PD/20231129/X6HfMTujh7a6KdCKFCXS1036271_00_00X6HfMTujh7a6KdCKFCXS.jpg/dims/resize/600/quality/95"
+                                        alt="product1"
+                                    />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img
+                                        src="https://cdn.daisomall.co.kr/file/PD/20231129/t0Zk91AjVgklVeJjwpkp1036271_00_01t0Zk91AjVgklVeJjwpkp.jpg/dims/resize/600/quality/95"
+                                        alt="product2"
+                                    />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img
+                                        src="https://cdn.daisomall.co.kr/file/PD/20231129/Cbn1aNIxhJRn6aWUDh7h1036271_00_02Cbn1aNIxhJRn6aWUDh7h.jpg/dims/resize/600/quality/95"
+                                        alt="product3"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination swiper-pagination__custom"></div>
+                    </div>
+                    <!-- 상품 컨테이너 스와이퍼 -->
+                    <!-- swiper__container -->
+                    <div class="goods-thumb-container">
+                        <div class="swiper mySwiper swiper__container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img
+                                        src="https://cdn.daisomall.co.kr/file/PD/20231129/X6HfMTujh7a6KdCKFCXS1036271_00_00X6HfMTujh7a6KdCKFCXS.jpg/dims/resize/600/quality/95"
+                                        alt="product1"
+                                    />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img
+                                        src="https://cdn.daisomall.co.kr/file/PD/20231129/t0Zk91AjVgklVeJjwpkp1036271_00_01t0Zk91AjVgklVeJjwpkp.jpg/dims/resize/600/quality/95"
+                                        alt="product2"
+                                    />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img
+                                        src="https://cdn.daisomall.co.kr/file/PD/20231129/Cbn1aNIxhJRn6aWUDh7h1036271_00_02Cbn1aNIxhJRn6aWUDh7h.jpg/dims/resize/600/quality/95"
+                                        alt="product3"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
                 </div>
-                <div class="swiper-slide">
-                  <img
-                    src="https://cdn.daisomall.co.kr/file/PD/20231129/t0Zk91AjVgklVeJjwpkp1036271_00_01t0Zk91AjVgklVeJjwpkp.jpg/dims/resize/600/quality/95"
-                    alt="product2"
-                  />
-                </div>
-                <div class="swiper-slide">
-                  <img
-                    src="https://cdn.daisomall.co.kr/file/PD/20231129/Cbn1aNIxhJRn6aWUDh7h1036271_00_02Cbn1aNIxhJRn6aWUDh7h.jpg/dims/resize/600/quality/95"
-                    alt="product3"
-                  />
-                </div>
-              </div>
-            </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-pagination swiper-pagination__custom"></div>
-          </div>
-          <!-- 상품 컨테이너 스와이퍼 -->
-          <!-- swiper__container -->
-          <div class="goods-thumb-container">
-            <div class="swiper mySwiper swiper__container">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <img
-                    src="https://cdn.daisomall.co.kr/file/PD/20231129/X6HfMTujh7a6KdCKFCXS1036271_00_00X6HfMTujh7a6KdCKFCXS.jpg/dims/resize/600/quality/95"
-                    alt="product1"
-                  />
-                </div>
-                <div class="swiper-slide">
-                  <img
-                    src="https://cdn.daisomall.co.kr/file/PD/20231129/t0Zk91AjVgklVeJjwpkp1036271_00_01t0Zk91AjVgklVeJjwpkp.jpg/dims/resize/600/quality/95"
-                    alt="product2"
-                  />
-                </div>
-                <div class="swiper-slide">
-                  <img
-                    src="https://cdn.daisomall.co.kr/file/PD/20231129/Cbn1aNIxhJRn6aWUDh7h1036271_00_02Cbn1aNIxhJRn6aWUDh7h.jpg/dims/resize/600/quality/95"
-                    alt="product3"
-                  />
-                </div>
-              </div>
-            </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-          </div>
-        </div>
-        <div class="goods-detail">
-          <div class="goods-price">
-            <span class="goods-price__value">5,000</span>
-            <span class="goods-price__won">원</span>
-            <button class="share_btn">공유하기</button>
-          </div>
-          <div class="goods-tit">컬러 완전자동 3단 우산(그린,네이비)</div>
-          <div class="guide-benefit">
-            <!-- 혜택안내 -->
-            <div class="guide__tit">혜택안내</div>
-            <div class="el-collapse">
-              <!-- 혜택 1 -->
-              <div class="el-collapse-item">
-                <div class="el-collapse-item__header">
-                  <p class="acco-tit">
-                    <span class="ico-wrap">
-                      <img
-                        src="https://cdn.daisomall.co.kr/apps/f/a1bae8769/img/ico_benefit_point.e3621e6.svg"
-                        alt="포인트 혜택"
-                      />
-                    </span>
-                    <button id="event1">
-                      구매 시, <em>0.1% 다이소 포인트</em> 적립
-                      <div class="el-collapse-item__arrow">드롭다운버튼</div>
-                    </button>
-                  </p>
+                <div class="goods-detail">
+                    <div class="goods-price">
+                        <span class="goods-price__value">5,000</span>
+                        <span class="goods-price__won">원</span>
+                        <button class="share_btn">공유하기</button>
+                    </div>
+                    <div class="goods-tit">컬러 완전자동 3단 우산(그린,네이비)</div>
+                    <div class="guide-benefit">
+                        <!-- 혜택안내 -->
+                        <div class="guide__tit">혜택안내</div>
+                        <div class="el-collapse">
+                            <!-- 혜택 1 -->
+                            <div class="el-collapse-item">
+                                <div class="el-collapse-item__header">
+                                    <p class="acco-tit">
+                                        <span class="ico-wrap">
+                                            <img
+                                                src="https://cdn.daisomall.co.kr/apps/f/a1bae8769/img/ico_benefit_point.e3621e6.svg"
+                                                alt="포인트 혜택"
+                                            />
+                                        </span>
+                                        <button id="event1">
+                                            구매 시, <em>0.1% 다이소 포인트</em> 적립
+                                            <div class="el-collapse-item__arrow">드롭다운버튼</div>
+                                        </button>
+                                    </p>
 
-                  <div class="el-collapse-item__wrap">
-                    <div class="el-collapse-item__content">
-                      <div class="acco-cont">
-                        <ul class="txt-list">
-                          <li>
-                            상품 구매 금액에 대해 0.1%를 다이소 포인트로
-                            적립해드려요.
-                          </li>
+                                    <div class="el-collapse-item__wrap">
+                                        <div class="el-collapse-item__content">
+                                            <div class="acco-cont">
+                                                <ul class="txt-list">
+                                                    <li>상품 구매 금액에 대해 0.1%를 다이소 포인트로 적립해드려요.</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 혜택 2 -->
+                            <div class="el-collapse-item">
+                                <div class="el-collapse-item__header">
+                                    <span class="ico-wrap">
+                                        <img
+                                            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIj4KICA8ZyBpZD0i6re466O5XzY2NjY0NyIgZGF0YS1uYW1lPSLqt7jro7kgNjY2NjQ3IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTEyMCAtODcyKSI+CiAgICA8cmVjdCBpZD0i7IKs6rCB7ZiVXzQ2NDgxNyIgZGF0YS1uYW1lPSLsgqzqsIHtmJUgNDY0ODE3IiB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDExMjAgODcyKSIgZmlsbD0iI2ZmZiIvPgogICAgPGcgaWQ9IuyCrOqwge2YlV80NjU3MzQiIGRhdGEtbmFtZT0i7IKs6rCB7ZiVIDQ2NTczNCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTEyMi41IDg3Ni43NSkiIGZpbGw9IiNmZmYiIHN0cm9rZT0iIzExMSIgc3Ryb2tlLXdpZHRoPSIxIj4KICAgICAgPHJlY3Qgd2lkdGg9IjE1IiBoZWlnaHQ9IjExLjI1IiByeD0iMiIgc3Ryb2tlPSJub25lIi8+CiAgICAgIDxyZWN0IHg9IjAuNSIgeT0iMC41IiB3aWR0aD0iMTQiIGhlaWdodD0iMTAuMjUiIHJ4PSIxLjUiIGZpbGw9Im5vbmUiLz4KICAgIDwvZz4KICAgIDxsaW5lIGlkPSLshKBfNjA2IiBkYXRhLW5hbWU9IuyEoCA2MDYiIHgyPSIxMy43NSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTEyMy4xMjUgODc5Ljg3NSkiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzExMSIgc3Ryb2tlLXdpZHRoPSIxIi8+CiAgPC9nPgo8L3N2Zz4K"
+                                            alt="카드 혜택"
+                                        />
+                                    </span>
+                                    <p class="acco-tit">다이소몰 결제혜택 안내</p>
+                                    <div class="el-collapse-item__arrow">드롭다운버튼</div>
+                                    <div class="el-collapse-item__wrap">
+                                        <div class="acco-cont">
+                                            <ul class="list-ty-bullet">
+                                                <li>
+                                                    카카오페이 혜택 안내
+                                                    <ul class="inner-list">
+                                                        <li>
+                                                            - 카카오페이머니로 3만원 이상 결제 시 카카오페이포인트
+                                                            1,500원 적립
+                                                        </li>
+                                                        <li>- 1일 1회, 기간 내 2회 참여가능</li>
+                                                        <li>
+                                                            ※ 자세한 사항은
+                                                            <a class="link-btn" href="#">카카오페이 이벤트 ☜ 클릭!</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                            <ul class="list-ty-bullet">
+                                                <li>
+                                                    다이소 삼성카드 혜택 안내
+                                                    <ul class="inner-list">
+                                                        <li>- 이용금액의 1% 결제일 할인</li>
+                                                        <li>- 전월실적 조건 및 할인한도 제한없음</li>
+                                                        <li>
+                                                            ※ 자세한 사항은
+                                                            <a class="link-btn" href="#">다이소 삼성카드 ☜클릭!</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 배송방법 -->
+                    <div class="guide-deliver">
+                        <div class="guide__tit">배송방법</div>
+                        <div class="el-radio-group">
+                            <div class="el-radio-group__1">
+                                <label role="radio" class="el-radio-button">
+                                    <input
+                                        type="radio"
+                                        class="el-radio-button__orig-radio"
+                                        name="el-radio-group"
+                                        value="01"
+                                    />
+                                    <span class="tit-h6">택배배송</span>
+                                    <span>10/19(토)</span>
+                                    <span>도착예정</span>
+                                </label>
+                            </div>
+                            <div class="el-radio-group__2">
+                                <label role="radio" class="el-radio-button">
+                                    <input
+                                        type="radio"
+                                        class="el-radio-button__orig-radio"
+                                        name="el-radio-group"
+                                        value="02"
+                                    />
+                                    <span class="tit-h6">매장픽업</span>
+                                    <span>내일 13시부터</span>
+                                    <span>픽업가능</span>
+                                </label>
+                            </div>
+                            <div class="el-radio-group__3">
+                                <label role="radio" class="el-radio-button">
+                                    <input
+                                        type="radio"
+                                        class="el-radio-button__orig-radio"
+                                        name="el-radio-group"
+                                        value="03"
+                                    />
+                                    <span class="tit-h6">대량주문</span>
+                                    <span>7일 이내</span>
+                                    <span>도착예정</span>
+                                </label>
+                            </div>
+                        </div>
+                        <!-- 배송방법 버튼 모달창 -->
+                        <button class="el-button">
+                            <span>구매 가능 픽업매장 찾기</span>
+                        </button>
+                        <button class="el-button">
+                            <span>대량주문 가능 지역 확인</span>
+                        </button>
+                    </div>
+                    <!-- 배송방법 밑 안내글 -->
+                    <!-- 아이콘 before로 넣어야함 -->
+                    <div class="delivery-set">
+                        <ul class="addr-cont">
+                            <li class="info-item-1">
+                                <div class="info-item__login">
+                                    <p><a href="#">로그인</a> 후 정확한 배송 정보를 확인해 보세요</p>
+                                </div>
+                            </li>
+                            <li class="info-item-2">
+                                <div class="info-item__large">
+                                    <p>지금 결제하면</p>
+                                </div>
+                            </li>
+                            <li class="info-item-3">
+                                <div class="info-item__large">
+                                    <div class="info-item__large__tit">배송비</div>
+                                    <div class="info-item__large__con">
+                                        <p>3,000원 (한진택배)</p>
+                                        <p>30,000원 이상 구매 시 무료</p>
+                                    </div>
+                                </div>
+                            </li>
                         </ul>
-                      </div>
                     </div>
-                  </div>
                 </div>
-              </div>
-              <!-- 혜택 2 -->
-              <div class="el-collapse-item">
-                <div class="el-collapse-item__header">
-                  <span class="ico-wrap">
-                    <img
-                      src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIj4KICA8ZyBpZD0i6re466O5XzY2NjY0NyIgZGF0YS1uYW1lPSLqt7jro7kgNjY2NjQ3IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTEyMCAtODcyKSI+CiAgICA8cmVjdCBpZD0i7IKs6rCB7ZiVXzQ2NDgxNyIgZGF0YS1uYW1lPSLsgqzqsIHtmJUgNDY0ODE3IiB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDExMjAgODcyKSIgZmlsbD0iI2ZmZiIvPgogICAgPGcgaWQ9IuyCrOqwge2YlV80NjU3MzQiIGRhdGEtbmFtZT0i7IKs6rCB7ZiVIDQ2NTczNCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTEyMi41IDg3Ni43NSkiIGZpbGw9IiNmZmYiIHN0cm9rZT0iIzExMSIgc3Ryb2tlLXdpZHRoPSIxIj4KICAgICAgPHJlY3Qgd2lkdGg9IjE1IiBoZWlnaHQ9IjExLjI1IiByeD0iMiIgc3Ryb2tlPSJub25lIi8+CiAgICAgIDxyZWN0IHg9IjAuNSIgeT0iMC41IiB3aWR0aD0iMTQiIGhlaWdodD0iMTAuMjUiIHJ4PSIxLjUiIGZpbGw9Im5vbmUiLz4KICAgIDwvZz4KICAgIDxsaW5lIGlkPSLshKBfNjA2IiBkYXRhLW5hbWU9IuyEoCA2MDYiIHgyPSIxMy43NSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTEyMy4xMjUgODc5Ljg3NSkiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzExMSIgc3Ryb2tlLXdpZHRoPSIxIi8+CiAgPC9nPgo8L3N2Zz4K"
-                      alt="카드 혜택"
-                    />
-                  </span>
-                  <p class="acco-tit">다이소몰 결제혜택 안내</p>
-                  <div class="el-collapse-item__arrow">드롭다운버튼</div>
-                  <div class="el-collapse-item__wrap">
-                    <div class="acco-cont">
-                      <ul class="list-ty-bullet">
-                        <li>
-                          카카오페이 혜택 안내
-                          <ul class="inner-list">
-                            <li>
-                              - 카카오페이머니로 3만원 이상 결제 시
-                              카카오페이포인트 1,500원 적립
-                            </li>
-                            <li>- 1일 1회, 기간 내 2회 참여가능</li>
-                            <li>
-                              ※ 자세한 사항은
-                              <a class="link-btn" href="#"
-                                >카카오페이 이벤트 ☜ 클릭!</a
-                              >
-                            </li>
-                          </ul>
-                        </li>
-                      </ul>
-                      <ul class="list-ty-bullet">
-                        <li>
-                          다이소 삼성카드 혜택 안내
-                          <ul class="inner-list">
-                            <li>- 이용금액의 1% 결제일 할인</li>
-                            <li>- 전월실적 조건 및 할인한도 제한없음</li>
-                            <li>
-                              ※ 자세한 사항은
-                              <a class="link-btn" href="#"
-                                >다이소 삼성카드 ☜클릭!</a
-                              >
-                            </li>
-                          </ul>
-                        </li>
-                      </ul>
+            </div>
+            <div class="product-cont">
+                <div class="el-tabs el-tabs--top">
+                    <div class="el-tabs__header is-top">
+                        <div class="el-tabs__nav-wrap is-top">
+                            <div class="el-tabs__nav-scroll">
+                                <div role="tavlist" class="el-tabs__nav is-to">
+                                    <div class="el-tabs__active-bar is-top"></div>
+                                    <div
+                                        id="tab-1"
+                                        aria-controls="pane-1"
+                                        role="tab"
+                                        aria-selected="true"
+                                        tabindex="0"
+                                        class="el-tabs__item is-top is-active is-closable"
+                                    >
+                                        <button>상품설명</button>
+                                    </div>
+                                    <div
+                                        id="tab-2"
+                                        aria-controls="pane-2"
+                                        role="tab"
+                                        tabindex="-1"
+                                        class="el-tabs__item is-top is-active is-closable"
+                                    >
+                                        <button>리뷰</button>
+                                    </div>
+                                    <div
+                                        id="tab-3"
+                                        aria-controls="pane-3"
+                                        role="tab"
+                                        tabindex="-1"
+                                        class="el-tabs__item is-top is-active is-closable"
+                                    >
+                                        <button>상품정보</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
+                    <div class="el-tabs__content">
+                        <div role="tabpanel" id="pane-1" aria-labelledby="tab-1" class="eltab-pane"></div>
+                        <div
+                            role="tabpanel"
+                            aria-hidden="true"
+                            id="pane-2"
+                            aria-labelledby="tab-2"
+                            class="eltab-pane"
+                        ></div>
+                        <div
+                            role="tabpanel"
+                            aria-hidden="true"
+                            id="pane-3"
+                            aria-labelledby="tab-3"
+                            class="eltab-pane"
+                        ></div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
-          <!-- 배송방법 -->
-          <div class="guide-deliver">
-            <div class="guide__tit">배송방법</div>
-            <div class="el-radio-group">
-              <div class="el-radio-group__1">
-                <label role="radio" class="el-radio-button">
-                  <input
-                    type="radio"
-                    class="el-radio-button__orig-radio"
-                    name="el-radio-group"
-                    value="01"
-                  />
-                  <span class="tit-h6">택배배송</span>
-                  <span>10/19(토)</span>
-                  <span>도착예정</span>
-                </label>
-              </div>
-              <div class="el-radio-group__2">
-                <label role="radio" class="el-radio-button">
-                  <input
-                    type="radio"
-                    class="el-radio-button__orig-radio"
-                    name="el-radio-group"
-                    value="02"
-                  />
-                  <span class="tit-h6">매장픽업</span>
-                  <span>내일 13시부터</span>
-                  <span>픽업가능</span>
-                </label>
-              </div>
-              <div class="el-radio-group__3">
-                <label role="radio" class="el-radio-button">
-                  <input
-                    type="radio"
-                    class="el-radio-button__orig-radio"
-                    name="el-radio-group"
-                    value="03"
-                  />
-                  <span class="tit-h6">대량주문</span>
-                  <span>7일 이내</span>
-                  <span>도착예정</span>
-                </label>
-              </div>
+            <div class="detail-tab-cont">
+                <div class="tab-cont detail">
+                    <div class="cms more">
+                        <div class="editor-area">
+                            <p>
+                                <img
+                                    src="https://cdn.daisomall.co.kr/file/PD/20231124/hTn6D5F8jhgeTg8pZSOi1036271_01_00hTn6D5F8jhgeTg8pZSOi.jpg/dims/resize/850/quality/100"
+                                    alt="상품 설명"
+                                />
+                                <br />
+                                <img
+                                    src="https://cdn.daisomall.co.kr/file/PD/20231124/CU7wqhsthRkyyKUGUZj61036271_01_01CU7wqhsthRkyyKUGUZj6.jpg/dims/resize/850/quality/100"
+                                    alt="상품 설명"
+                                />
+                                <br />
+                                <img
+                                    src="https://cdn.daisomall.co.kr/file/PD/20231124/LiJGYhaNhsiHfObmjzGx1036271_01_02LiJGYhaNhsiHfObmjzGx.jpg/dims/resize/850/quality/100"
+                                    alt="상품 설명"
+                                />
+                                <br />
+                                <img
+                                    src="https://cdn.daisomall.co.kr/file/PD/20231124/qB3QTmDVLQiriZNG0B4w1036271_01_99qB3QTmDVLQiriZNG0B4w.jpg/dims/resize/850/quality/100"
+                                    alt="상품 설명"
+                                />
+                            </p>
+                        </div>
+                        <div class="report-area">
+                            <div class="box-gray">
+                                <div class="tit"><strong>상품정보에 문제가 있나요?</strong></div>
+                                <div>품번 : 1036271</div>
+                                <button class="el-button link arrow-right black el-button--default">
+                                    <span>신고하기</span>버튼
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 상품 추천란 -->
+                    <!-- 다른 고객이 함께 구매한 상품 -->
+                </div>
+                <div class="tab-cont review">
+                    <h2 class="tit-area">
+                        리뷰
+                        <em class="num">64</em>
+                    </h2>
+                </div>
+                <div class="detail-review">
+                    <div class="rate-box">
+                        <div role="slider" class="el-rate is-disabled">
+                            <span class="el-rate__item">
+                                <i class="el-rate__icon el-icon-star-on"> 아이콘 </i>
+                            </span>
+                            <span class="el-rate__item">
+                                <i class="el-rate__icon el-icon-star-on"> 아이콘 </i>
+                            </span>
+                            <span class="el-rate__item">
+                                <i class="el-rate__icon el-icon-star-on"> 아이콘 </i>
+                            </span>
+                            <span class="el-rate__item">
+                                <i class="el-rate__icon el-icon-star-on"> 아이콘 </i>
+                            </span>
+                            <span class="el-rate__item">
+                                <i class="el-rate__icon el-icon-star-on">
+                                    <i class="el-rate__decimal el-icon-star-on"></i>
+                                    아이콘
+                                </i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="rating-score-box">
+                        <div class="rating-score">
+                            <div class="tit">
+                                <span>색상</span>
+                            </div>
+                            <div role="tablist" aria-multiselectable="true" class="el-collapse accordion-rating">
+                                <div class="el-collapse-item is-active">
+                                    <div
+                                        role="tab"
+                                        aria-expanded="true"
+                                        aria-controls="el-collapse-content-719"
+                                        aria-describedby="el-collapse-content-719"
+                                    >
+                                        <div
+                                            role="button"
+                                            id="el-collapse-head-719"
+                                            tabindex="0"
+                                            class="el-collapse-item__header is-active"
+                                        >
+                                            <div class="name">화면과 같아요</div>
+                                            <div class="value">76%</div>
+                                            <i class="el-collapse-item__arrow el-icon-arrow-right is-active"></i>
+                                        </div>
+                                    </div>
+                                    <div
+                                        role="tabpanel"
+                                        aria-labelledby="el-collapse-head-719"
+                                        id="el-collapse-content-719"
+                                        class="el-collapse-item__wrap"
+                                    >
+                                        <div class="el-collapse-item__content">
+                                            <div>
+                                                <div class="rating-score-list">
+                                                    <span class="eval">화면과 같아요</span>
+                                                    <div
+                                                        role="progressbar"
+                                                        aria-valuenow="76"
+                                                        aria-valuemin="0"
+                                                        aria-valuenow="100"
+                                                        class="el-progress el-progress--line el-progress--without-text"
+                                                    >
+                                                        <div class="el-progress-bar">
+                                                            <div class="el-progress-bar__outer">
+                                                                <div class="el-progress-bar__inner"></div>
+                                                            </div>
+                                                        </div>
+                                                        <!--  -->
+                                                    </div>
+                                                    <span class="val">76%</span>
+                                                </div>
+                                                <div class="rating-score-list">
+                                                    <span class="eval">화면과 비슷해요</span>
+                                                    <div
+                                                        role="progressbar"
+                                                        aria-valuenow="23"
+                                                        aria-valuemin="0"
+                                                        aria-valuemax="100"
+                                                        class="el-progress el-progress--line el-progress--without-text"
+                                                    >
+                                                        <div class="el-progress-bar">
+                                                            <div class="el-progress-bar__outer">
+                                                                <div class="el-progress-bar__inner"></div>
+                                                            </div>
+                                                        </div>
+                                                        <!--  -->
+                                                    </div>
+                                                    <span class="val">23%</span>
+                                                </div>
+                                                <div class="rating-score-list">
+                                                    <span class="eval">화면과 달라요</span>
+                                                    <div
+                                                        role="progressbar"
+                                                        aria-valuenow="1"
+                                                        aria-valuemin="0"
+                                                        aria-valuemax="100"
+                                                        class="el-progress el-progress--line el-progress--without-text"
+                                                    >
+                                                        <div class="el-progress-bar">
+                                                            <div class="el-progress-bar__outer">
+                                                                <div class="el-progress-bar__inner"></div>
+                                                            </div>
+                                                        </div>
+                                                        <!--  -->
+                                                    </div>
+                                                    <span class="val">1%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rating-score">
+                            <div class="tit">
+                                <span>디자인</span>
+                            </div>
+                            <div role="tablist" aria-multiselectable="true" class="el-collapse accordion-rating">
+                                <div class="el-collapse-item is-active">
+                                    <div
+                                        role="tab"
+                                        aria-expanded="true"
+                                        aria-controls="el-collapse-content-3192"
+                                        aria-describedby="el-collapse-content-3192"
+                                    >
+                                        <div
+                                            role="button"
+                                            id="el-collapse-head-3192"
+                                            tabindex="0"
+                                            class="el-collapse-item__header is-active"
+                                        >
+                                            <div class="name">아주 마음에 들어요</div>
+                                            <div class="value">60%</div>
+                                            <i class="el-collapse-item__arrow el-icon-arrow-right is-active"></i>
+                                        </div>
+                                    </div>
+                                    <div
+                                        role="tabpanel"
+                                        aria-labelledby="el-collapse-head-3192"
+                                        id="el-collapse-content-3192"
+                                        class="el-collapse-item__wrap"
+                                    >
+                                        <div class="el-collapse-item__content">
+                                            <div>
+                                                <div class="rating-score-list">
+                                                    <span class="eval">아주 마음에 들어요</span>
+                                                    <div
+                                                        role="progressbar"
+                                                        aria-valuenow="60"
+                                                        aria-valuemin="0"
+                                                        aria-valuenow="100"
+                                                        class="el-progress el-progress--line el-progress--without-text"
+                                                    >
+                                                        <div class="el-progress-bar">
+                                                            <div class="el-progress-bar__outer">
+                                                                <div class="el-progress-bar__inner"></div>
+                                                            </div>
+                                                        </div>
+                                                        <!--  -->
+                                                    </div>
+                                                    <span class="val">60%</span>
+                                                </div>
+                                                <div class="rating-score-list">
+                                                    <span class="eval">마음에 들어요</span>
+                                                    <div
+                                                        role="progressbar"
+                                                        aria-valuenow="39"
+                                                        aria-valuemin="0"
+                                                        aria-valuemax="100"
+                                                        class="el-progress el-progress--line el-progress--without-text"
+                                                    >
+                                                        <div class="el-progress-bar">
+                                                            <div class="el-progress-bar__outer">
+                                                                <div class="el-progress-bar__inner"></div>
+                                                            </div>
+                                                        </div>
+                                                        <!--  -->
+                                                    </div>
+                                                    <span class="val">39%</span>
+                                                </div>
+                                                <div class="rating-score-list">
+                                                    <span class="eval">마음에 들지 않아요</span>
+                                                    <div
+                                                        role="progressbar"
+                                                        aria-valuenow="1"
+                                                        aria-valuemin="0"
+                                                        aria-valuemax="100"
+                                                        class="el-progress el-progress--line el-progress--without-text"
+                                                    >
+                                                        <div class="el-progress-bar">
+                                                            <div class="el-progress-bar__outer">
+                                                                <div class="el-progress-bar__inner"></div>
+                                                            </div>
+                                                        </div>
+                                                        <!--  -->
+                                                    </div>
+                                                    <span class="val">1%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rating-score">
+                            <div class="tit">
+                                <span>크기</span>
+                            </div>
+                            <div role="tablist" aria-multiselectable="true" class="el-collapse accordion-rating">
+                                <div class="el-collapse-item is-active">
+                                    <div
+                                        role="tab"
+                                        aria-expanded="true"
+                                        aria-controls="el-collapse-content-2331"
+                                        aria-describedby="el-collapse-content-2331"
+                                    >
+                                        <div
+                                            role="button"
+                                            id="el-collapse-head-2331"
+                                            tabindex="0"
+                                            class="el-collapse-item__header is-active"
+                                        >
+                                            <div class="name">적당해요</div>
+                                            <div class="value">86%</div>
+                                            <i class="el-collapse-item__arrow el-icon-arrow-right is-active"></i>
+                                        </div>
+                                    </div>
+                                    <div
+                                        role="tabpanel"
+                                        aria-labelledby="el-collapse-head-2331"
+                                        id="el-collapse-content-2331"
+                                        class="el-collapse-item__wrap"
+                                    >
+                                        <div class="el-collapse-item__content">
+                                            <div>
+                                                <div class="rating-score-list">
+                                                    <span class="eval">생각보다 커요</span>
+                                                    <div
+                                                        role="progressbar"
+                                                        aria-valuenow="7"
+                                                        aria-valuemin="0"
+                                                        aria-valuenow="100"
+                                                        class="el-progress el-progress--line el-progress--without-text"
+                                                    >
+                                                        <div class="el-progress-bar">
+                                                            <div class="el-progress-bar__outer">
+                                                                <div class="el-progress-bar__inner"></div>
+                                                            </div>
+                                                        </div>
+                                                        <!--  -->
+                                                    </div>
+                                                    <span class="val">7%</span>
+                                                </div>
+                                                <div class="rating-score-list">
+                                                    <span class="eval">적당해요</span>
+                                                    <div
+                                                        role="progressbar"
+                                                        aria-valuenow="86"
+                                                        aria-valuemin="0"
+                                                        aria-valuemax="100"
+                                                        class="el-progress el-progress--line el-progress--without-text"
+                                                    >
+                                                        <div class="el-progress-bar">
+                                                            <div class="el-progress-bar__outer">
+                                                                <div class="el-progress-bar__inner"></div>
+                                                            </div>
+                                                        </div>
+                                                        <!--  -->
+                                                    </div>
+                                                    <span class="val">86%</span>
+                                                </div>
+                                                <div class="rating-score-list">
+                                                    <span class="eval">생각보다 작아요</span>
+                                                    <div
+                                                        role="progressbar"
+                                                        aria-valuenow="7"
+                                                        aria-valuemin="0"
+                                                        aria-valuemax="100"
+                                                        class="el-progress el-progress--line el-progress--without-text"
+                                                    >
+                                                        <div class="el-progress-bar">
+                                                            <div class="el-progress-bar__outer">
+                                                                <div class="el-progress-bar__inner"></div>
+                                                            </div>
+                                                        </div>
+                                                        <!--  -->
+                                                    </div>
+                                                    <span class="val">7%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="tit-area">
+                        <h3 class="tit-h4">사진&동영상</h3>
+                        <div class="add-ons">
+                            <a href="#" class="btn-show-all">
+                                전체보기
+                                <img src="#" alt="링크 이동 아이콘" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <!-- 배송방법 버튼 모달창 -->
-            <button class="el-button">
-              <span>구매 가능 픽업매장 찾기</span>
-            </button>
-            <button class="el-button">
-              <span>대량주문 가능 지역 확인</span>
-            </button>
-          </div>
-          <!-- 배송방법 밑 안내글 -->
-          <!-- 아이콘 before로 넣어야함 -->
-          <div class="delivery-set">
-            <ul class="addr-cont">
-              <li class="info-item-1">
-                <div class="info-item__login">
-                  <p>
-                    <a href="#">로그인</a> 후 정확한 배송 정보를 확인해 보세요
-                  </p>
-                </div>
-              </li>
-              <li class="info-item-2">
-                <div class="info-item__large">
-                  <p>지금 결제하면</p>
-                </div>
-              </li>
-              <li class="info-item-3">
-                <div class="info-item__large">
-                  <div class="info-item__large__tit">배송비</div>
-                  <div class="info-item__large__con">
-                    <p>3,000원 (한진택배)</p>
-                    <p>30,000원 이상 구매 시 무료</p>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
         </div>
-      </div>
-      <div class="product-cont">
-        <div class="el-tabs el-tabs--top">
-          <div class="el-tabs__header is-top">
-            <div class="el-tabs__nav-wrap is-top">
-              <div class="el-tabs__nav-scroll">
-                <div role="tavlist" class="el-tabs__nav is-to">
-                  <div class="el-tabs__active-bar is-top"></div>
-                  <div
-                    id="tab-1"
-                    aria-controls="pane-1"
-                    role="tab"
-                    aria-selected="true"
-                    tabindex="0"
-                    class="el-tabs__item is-top is-active is-closable"
-                  >
-                    <button>상품설명</button>
-                  </div>
-                  <div
-                    id="tab-2"
-                    aria-controls="pane-2"
-                    role="tab"
-                    tabindex="-1"
-                    class="el-tabs__item is-top is-active is-closable"
-                  >
-                    <button>리뷰</button>
-                  </div>
-                  0000
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </body>
+    </body>
 </html>
