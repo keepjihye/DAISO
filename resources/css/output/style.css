@@ -3179,7 +3179,7 @@ input[type=checkbox] {
   width: 100%;
   max-width: 1920px;
   height: 100%;
-  padding: 0 20px;
+  padding: 0 320px;
   margin: 0 auto;
 }
 
@@ -3337,10 +3337,11 @@ input[type=checkbox] {
   display: flex;
   margin-top: 16px;
 }
-.guide-deliver .el-radio-group .el-radio-group__1::before {
-  background: url(https://cdn.daisomall.co.kr/apps/f/c7ed989e2/img/ico_purchase_delivery.5d92348.png) no-repeat 0 0/50px 50px;
+.guide-deliver .el-radio-group .el-radio-group__1:before {
+  content: "";
   width: 50px;
   height: 50px;
+  position: absolute;
 }
 
 html,

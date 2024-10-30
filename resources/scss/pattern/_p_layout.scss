@@ -4,11 +4,8 @@
     max-width: $grid;
     height: 100%;
     // content를 1280px로 만들기 위함
-    padding: 0 $p-mobile;
+    padding: 0 $p-tablet;
     margin: 0 auto;
-    // @include tabletMore {
-    //     padding: 0 $p-tablet;
-    // }
 }
 
 .crumbs {
@@ -59,7 +56,7 @@
         position: absolute;
         right: 0;
         top: 50%;
-        content: '';
+        content: "";
         background-image: url(https://cdn.daisomall.co.kr/apps/f/c7ed989e2/img/ico_prod_share.539caf2.svg);
         background-repeat: no-repeat;
         background-position: 50%;
@@ -92,8 +89,8 @@
             &::before {
                 position: absolute;
                 right: 0;
-                content: '\f107';
-                font-family: 'Line Awesome Free';
+                content: "\f107";
+                font-family: "Line Awesome Free";
                 font-weight: 900;
             }
         }
@@ -107,7 +104,7 @@
                 display: block;
                 background: #646f7c;
                 border-radius: 50%;
-                content: '';
+                content: "";
                 width: 4px;
                 height: 4px;
                 position: absolute;
@@ -129,8 +126,8 @@
             &::before {
                 position: absolute;
                 right: 0;
-                content: '\f107';
-                font-family: 'Line Awesome Free';
+                content: "\f107";
+                font-family: "Line Awesome Free";
                 font-weight: 900;
             }
         }
@@ -144,7 +141,7 @@
                 display: block;
                 background: #646f7c;
                 border-radius: 50%;
-                content: '';
+                content: "";
                 width: 4px;
                 height: 4px;
                 position: absolute;
@@ -170,8 +167,8 @@
         margin-top: 16px;
         .el-radio-group__1 {
             &:before {
-                background: url(/DAISO/resources/images/howto/package.png);
-                content: '';
+                // background: url(/DAISO/resources/images/howto/package.png);
+                content: "";
                 width: 50px;
                 height: 50px;
                 position: absolute;
