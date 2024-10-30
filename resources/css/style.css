@@ -3325,6 +3325,24 @@ input[type=checkbox] {
   color: #067dfd;
 }
 
+.guide-deliver {
+  margin-top: 32px;
+  position: relative;
+}
+.guide-deliver .guide-tit {
+  line-height: 21px;
+  margin: 0;
+}
+.guide-deliver .el-radio-group {
+  display: flex;
+  margin-top: 16px;
+}
+.guide-deliver .el-radio-group .el-radio-group__1::before {
+  background: url(https://cdn.daisomall.co.kr/apps/f/c7ed989e2/img/ico_purchase_delivery.5d92348.png) no-repeat 0 0/50px 50px;
+  width: 50px;
+  height: 50px;
+}
+
 html,
 body {
   position: relative;
