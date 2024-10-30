@@ -11,7 +11,18 @@
     }
 }
 
+.page-tit-area {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
 .goods-thumb-wrap {
     width: 570px;
     height: 100%;
+}
+
+.goods-detail {
+    max-width: calc(100% - 570px);
+    padding-left: 80px;
 }
