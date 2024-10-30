@@ -3171,7 +3171,7 @@ input[type=checkbox] {
 .inner {
   width: 100%;
   height: 100%;
-  padding: 0 320px;
+  padding: 0 30px;
   margin: 0 auto;
 }
 
@@ -3181,7 +3181,7 @@ input[type=checkbox] {
 }
 
 .page-tit-area {
-  width: 100%;
+  width: 1280px;
   height: 100%;
   display: flex;
 }
