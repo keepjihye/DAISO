@@ -150,13 +150,45 @@
     .el-radio-group {
         display: flex;
         margin-top: 16px;
-        .el-radio-group__1 {
-            &:before {
-                // background: url(/DAISO/resources/images/howto/package.png);
-                content: "";
-                width: 50px;
-                height: 50px;
-                position: absolute;
+        gap: 10px;
+    }
+}
+.el-radio-group {
+    width: 100%;
+    height: 100%;
+    .el-radio {
+        width: 150px;
+        height: 150px;
+        padding: 15px;
+        border: 1px solid $gray-20;
+        display: flex;
+    }
+}
+
+.el-radio-group__1 {
+    .el-radio-button {
+        display: inline-block;
+        outline: 0;
+        position: relative;
+        width: 100%;
+        &::before {
+            background: url(https://cdn.daisomall.co.kr/apps/f/e8a827a9f/img/ico_purchase_delivery.5d92348.png)
+                no-repeat 0 0 / 50px 50px;
+            content: "";
+            height: 50px;
+            left: 50%;
+            position: absolute;
+            transform: translateX(-50%);
+            width: 50px;
+            z-index: 1;
+        }
+        .tit-h6 {
+            display: block;
+            margin-top: 58px;
+            text-align: center;
+            span {
+                display: block;
+                font-size: 1.4rem;
             }
         }
     }
