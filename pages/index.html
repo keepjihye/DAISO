@@ -89,9 +89,13 @@
                     <!--오른쪽 영역 -->
                     <div class="goods-detail">
                         <div class="goods-price">
-                            <span class="goods-price__value">5,000</span>
-                            <span class="goods-price__won">원</span>
-                            <button class="share_btn">공유하기</button>
+                            <div class="goods-price__wrap">
+                                <strong class="goods-price__value">5,000</strong>
+                                <span class="goods-price__won">원</span>
+                            </div>
+                            <button class="share_btn">
+                                <p>공유하기</p>
+                            </button>
                         </div>
                         <div class="goods-tit">컬러 완전자동 3단 우산(그린,네이비)</div>
                         <div class="guide-benefit">
@@ -101,15 +105,21 @@
                                 <!-- 혜택 1 -->
                                 <div class="el-collapse-item">
                                     <div class="el-collapse-item__header">
-                                        <span class="ico-wrap">
-                                            <img src="https://cdn.daisomall.co.kr/apps/f/a1bae8769/img/ico_benefit_point.e3621e6.svg"
-                                                alt="포인트 혜택">
-                                        </span>
-                                        <p class="acco-tit">
-                                            구매 시, <em>0.1% 다이소 포인트</em> 적립
-                                        </p>
-                                        <div class="el-collapse-item__arrow">드롭다운버튼</div>
                                         <div class="el-collapse-item__wrap">
+                                            <div class="item-tit">
+                                                <span class="ico-wrap">
+                                                    <img src="https://cdn.daisomall.co.kr/apps/f/a1bae8769/img/ico_benefit_point.e3621e6.svg"
+                                                        alt="포인트 혜택">
+                                                </span>
+                                                <p class="acco-tit">
+                                                    구매 시, <em>0.1% 다이소 포인트</em> 적립
+                                                </p>
+                                            </div>
+                                            <button class="el-collapse-item__arrow">
+                                                <p>드롭다운버튼</p>
+                                            </button>
+                                        </div>
+                                        <div class="el-collapse-item__wrap-con">
                                             <div class="el-collapse-item__content">
                                                 <div class="acco-cont">
                                                     <ul class="txt-list">
@@ -165,16 +175,18 @@
                         <div class="guide-deliver">
                             <div class="guide__tit">배송방법</div>
                             <div class="el-radio-group">
-                                <div class="el-radio-group__1">
+                                <div class="el-radio-group__1 el-radio">
                                     <label role="radio" class="el-radio-button">
                                         <input type="radio" class="el-radio-button__orig-radio" name="el-radio-group"
                                             value="01">
-                                        <span class="tit-h6">택배배송</span>
-                                        <span>10/19(토)</span>
-                                        <span>도착예정</span>
+                                        <div class="tit-h6">
+                                            <strong>택배배송</strong>
+                                            <span>10/19(토)</span>
+                                            <span>도착예정</span>
+                                        </div>
                                     </label>
                                 </div>
-                                <div class="el-radio-group__2">
+                                <div class="el-radio-group__2 el-radio">
                                     <label role="radio" class="el-radio-button">
                                         <input type="radio" class="el-radio-button__orig-radio" name="el-radio-group"
                                             value="02">
@@ -183,7 +195,7 @@
                                         <span>픽업가능</span>
                                     </label>
                                 </div>
-                                <div class="el-radio-group__3">
+                                <div class="el-radio-group__3 el-radio">
                                     <label role="radio" class="el-radio-button">
                                         <input type="radio" class="el-radio-button__orig-radio" name="el-radio-group"
                                             value="03">
