@@ -9,3 +9,25 @@ $(".el-collapse-item__wrap").on("click", function () {
         $wrapCon.slideDown().addClass("active");
     }
 });
+
+
+const radioButtons = document.querySelectorAll('.el-radio-button__orig-radio');
+
+radioButtons.forEach((radio) => {
+    radio.addEventListener('click', () => {
+        // 모든 라디오 버튼의 부모 요소에서 active 클래스 제거
+        radioButtons.forEach((btn) => {
+            btn.parentElement.classList.remove('active');
+            // 부모의 부모 요소 배경색 제거
+            btn.parentElement.parentElement.style.border = '';
+        });
+
+        // 클릭된 라디오 버튼의 부모 요소에 active 클래스 추가
+        radio.parentElement.classList.add('active');
+
+        // 부모 요소에 active 클래스가 있는 경우 그 부모의 부모 요소 배경색 설정
+        if (radio.parentElement.classList.contains('active')) {
+            radio.parentElement.parentElement.style.border = '2px solid #067dfd';
+        }
+    });
+});

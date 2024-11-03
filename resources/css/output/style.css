@@ -3347,6 +3347,7 @@ input[type=checkbox] {
   padding: 15px;
   border: 1px solid #e4e4e4;
   display: flex;
+  border-radius: 5px;
 }
 
 .el-radio-group__1 .el-radio-button {
