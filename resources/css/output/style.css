@@ -3401,6 +3401,20 @@ input[type=checkbox] {
   margin-top: 16px;
   gap: 10px;
 }
+.guide-deliver .el-button__pickup {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding-right: 20px;
+}
+.guide-deliver .el-button__pickup::after {
+  content: "\f105";
+  font-family: "Line Awesome Free";
+  font-weight: 900;
+  width: 20px;
+  height: 20px;
+}
 
 .el-radio-group {
   width: 100%;

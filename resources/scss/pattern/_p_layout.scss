@@ -213,7 +213,23 @@
         margin-top: 16px;
         gap: 10px;
     }
+    .el-button__pickup {
+        // display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 0;
+        padding-right: 20px;
+        &::after {
+            content: '\f105';
+            font-family: 'Line Awesome Free';
+            font-weight: 900;
+            width: 20px;
+            height: 20px;
+        }
+    }
 }
+
 .el-radio-group {
     width: 100%;
     height: 100%;

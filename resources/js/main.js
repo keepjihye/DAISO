@@ -42,3 +42,15 @@ radioButtons.forEach((radio) => {
         }
     });
 });
+
+$('.el-radio-group__2').on('click', function () {
+    const $pickupbtn = $('.el-button__pickup');
+
+    if ($pickupbtn.hasClass('active')) {
+        // active 클래스가 있을 경우 슬라이드업하고 active 클래스 제거
+        $pickupbtn.removeClass('active');
+    } else {
+        // active 클래스가 없을 경우 슬라이드다운하고 active 클래스 추가
+        $pickupbtn.addClass('active');
+    }
+});
