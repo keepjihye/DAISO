@@ -11,12 +11,17 @@
     <!-- line awesome -->
     <link rel="stylesheet"
         href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <!-- css -->
+    <link rel="stylesheet" href="../resources/css/output/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <!-- jquery CDN -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <!-- js -->
     <script defer src="../resources/js/main.js"></script>
-    <!-- css -->
-    <link rel="stylesheet" href="../resources/css/output/style.css">
+    <script defer src="../resources/js/review-swiper.js"></script>
+
+
 
 </head>
 
@@ -45,8 +50,397 @@
                         </div>
                         <!-- 리뷰 -->
                         <div id="product-riv">
-                            <img src="../resources/images/리뷰내용.png" alt="리뷰내용">
+                            <div class="product-riv__tit tit-area">
+                                <h2>리뷰
+                                    <em>3</em>
+                                </h2>
+                            </div>
+                            <div class="product-riv__rate">
+                                <strong>5.0</strong>
+                                <div class="rate__icons">
+                                    <span class="rate__icon">
+                                        <i>별</i>
+                                    </span>
+                                    <span class="rate__icon">
+                                        <i>별</i>
+                                    </span>
+                                    <span class="rate__icon">
+                                        <i>별</i>
+                                    </span>
+                                    <span class="rate__icon">
+                                        <i>별</i>
+                                    </span>
+                                    <span class="rate__icon">
+                                        <i>별</i>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <!-- 색상 -->
+                            <div class="product-riv__cat-wrap">
+                                <div class="product-riv__cat">
+                                    <div class="product-riv__cat-tit">
+                                        <span>색상</span>
+                                        <div class="color-tit">
+                                            <p>화면과 같아요</p>
+                                            <strong>100%</strong>
+                                        </div>
+                                    </div>
+                                    <div class="el-collapse-item__wrap">
+                                        <div class="el-collapse-item__content el-collapse-item__content_1">
+                                            <div class="rating-score-list">
+                                                <p>화면과 같아요</p>
+                                                <span>100%</span>
+
+                                            </div>
+                                            <div class="progressbar bar1"></div>
+                                        </div>
+                                        <div class="el-collapse-item__content el-collapse-item__content_2">
+                                            <div class="rating-score-list">
+                                                <p>화면과 비슷해요</p>
+                                                <span>0%</span>
+
+                                            </div>
+                                            <div class="progressbar bar2"></div>
+                                        </div>
+                                        <div class="el-collapse-item__content el-collapse-item__content_3">
+                                            <div class="rating-score-list">
+                                                <p>화면과 달라요</p>
+                                                <span>0%</span>
+                                            </div>
+                                            <div class="progressbar bar3"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 디자인 -->
+                                <div class="product-riv__cat">
+                                    <div class="product-riv__cat-tit">
+                                        <span>디자인</span>
+                                        <div class="color-tit">
+                                            <p>마음에 들어요</p>
+                                            <strong>100%</strong>
+                                        </div>
+                                    </div>
+                                    <div class="el-collapse-item__wrap">
+                                        <div class="el-collapse-item__content el-collapse-item__content_1">
+                                            <div class="rating-score-list">
+                                                <p>아주 마음에 들어요</p>
+                                                <span>100%</span>
+
+                                            </div>
+                                            <div class="progressbar bar1"></div>
+                                        </div>
+                                        <div class="el-collapse-item__content el-collapse-item__content_2">
+                                            <div class="rating-score-list">
+                                                <p>마음에 들어요</p>
+                                                <span>0%</span>
+
+                                            </div>
+                                            <div class="progressbar bar2"></div>
+                                        </div>
+                                        <div class="el-collapse-item__content el-collapse-item__content_3">
+                                            <div class="rating-score-list">
+                                                <p>마음에 들지 않아요</p>
+                                                <span>0%</span>
+                                            </div>
+                                            <div class="progressbar bar3"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 크기 -->
+                                <div class="product-riv__cat">
+                                    <div class="product-riv__cat-tit">
+                                        <span>크기</span>
+                                        <div class="color-tit">
+                                            <p>적당해요</p>
+                                            <strong>100%</strong>
+                                        </div>
+                                    </div>
+                                    <div class="el-collapse-item__wrap">
+                                        <div class="el-collapse-item__content el-collapse-item__content_1">
+                                            <div class="rating-score-list">
+                                                <p>생각보다 커요</p>
+                                                <span>100%</span>
+
+                                            </div>
+                                            <div class="progressbar bar1"></div>
+                                        </div>
+                                        <div class="el-collapse-item__content el-collapse-item__content_2">
+                                            <div class="rating-score-list">
+                                                <p>적당해요</p>
+                                                <span>0%</span>
+
+                                            </div>
+                                            <div class="progressbar bar2"></div>
+                                        </div>
+                                        <div class="el-collapse-item__content el-collapse-item__content_3">
+                                            <div class="rating-score-list">
+                                                <p>생각보다 작아요</p>
+                                                <span>0%</span>
+                                            </div>
+                                            <div class="progressbar bar3"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="line"></div>
+
+                            <!-- 사진 & 동영상 -->
+                            <div class="product-riv__img">
+                                <div class="product-riv__img__tit">
+                                    <h3>사진&동영상</h3>
+                                    <a class="more">
+                                        <p>전체보기</p>
+                                        <span>
+                                            <i>아이콘</i>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper mySwiper swiper-review">
+                                    <div class="swiper-wrapper goods-thumb-container">
+                                        <div class="swiper-slide slide1">
+                                            <strong>5.0</strong>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="https://cdn.daisomall.co.kr/file/PD/20241003/MjKkJRiNCSag1wexPHmkMjKkJRiNCSag1wexPHmk.jpg/dims/resize/200/quality/90"
+                                                alt="Slide2">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="https://cdn.daisomall.co.kr/file/PD/20240925/n82GxFBfKIJmCJV7m4Tzn82GxFBfKIJmCJV7m4Tz.jpg/dims/resize/200/quality/90"
+                                                alt="Slide3">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="https://cdn.daisomall.co.kr/file/PD/20240828/uaYi6utSQcG7j247B6LNuaYi6utSQcG7j247B6LN.jpeg/dims/resize/200/quality/90"
+                                                alt="Slide4">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="https://cdn.daisomall.co.kr/file/PD/20240822/oPJjSUs3kEnmUnErmalUoPJjSUs3kEnmUnErmalU.jpg/dims/resize/200/quality/90"
+                                                alt="Slide5">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="https://cdn.daisomall.co.kr/file/PD/20240817/4Lzvijnytd4gfOA7CyOD4Lzvijnytd4gfOA7CyOD.jpg/dims/resize/200/quality/90"
+                                                alt="Slide6">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="https://cdn.daisomall.co.kr/file/PD/20240816/DoGFdXcmYJJ2rmsss2HPDoGFdXcmYJJ2rmsss2HP.jpg/dims/resize/200/quality/90"
+                                                alt="Slide7">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="https://cdn.daisomall.co.kr/file/PD/20240723/CilHoD2Gh130lMSluBQSCilHoD2Gh130lMSluBQS.jpg/dims/resize/200/quality/90"
+                                                alt="Slide8">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="https://cdn.daisomall.co.kr/file/PD/20240718/sJUS4emMbK9Gxk4rmuaTsJUS4emMbK9Gxk4rmuaT.MOV/xcdr/capture/ts=1/dims/resize/200/quality/90"
+                                                alt="Slide9">
+                                        </div>
+                                        <div class="swiper-button-next"></div>
+                                        <div class="swiper-button-prev"></div>
+                                    </div>
+
+                                </div>
+                                <!-- 리뷰 스와이퍼 -->
+                            </div>
+
+                            <!-- 리뷰 내용글 -->
+                            <div class="product-riv__con">
+                                <div class="product-cont__con-tit-wrap">
+                                    <div class="product-riv__con-tit">
+                                        <input type="radio" name="view" value="full">전체
+                                        <input type="radio" name="view" value="repu">재구매
+                                    </div>
+                                    <div class="option-order">
+                                        <select name="order" id="order">
+                                            <option value="추천순">추천순</option>
+                                            <option value="최신순">최신순</option>
+                                            <option value="최신순">별점높은순</option>
+                                            <option value="최신순">별점낮은순</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="product-riv__con-wir-wrap">
+                                    <div class="product-riv__con-wir">
+                                        <div class="user">
+                                            <div class="user__wrap">
+                                                <div class="user-img">
+                                                    <img src="https://www.daisomall.co.kr/images/icon/profile_noimg.png"
+                                                        alt="user-img">
+                                                </div>
+                                                <div class="user-id">
+                                                    <p>day****</p>
+                                                </div>
+                                                <div class="user-sco">
+                                                    <span class="star"><i>별</i></span>
+                                                    <span class="score">5점</span>
+                                                    <span>2024-11-06</span>
+                                                </div>
+                                            </div>
+                                            <button class="report">
+                                                <span>
+                                                    <i>신고하기버튼</i>
+                                                </span>
+                                                <div class="report-act">
+                                                    <p>신고하기</p>
+                                                </div>
+                                            </button>
+                                        </div>
+                                        <div class="user-rating">
+                                            <div class="user-color">
+                                                <span>색상</span>
+                                                <span>화면과 같아요</span>
+                                            </div>
+                                            <div class="user-des">
+                                                <span>디자인</span>
+                                                <span>마음에 들어요</span>
+                                            </div>
+                                            <div class="user-siz">
+                                                <span>크기</span>
+                                                <span>적당해요</span>
+                                            </div>
+                                        </div>
+                                        <div class="user-wri">
+                                            <div class="user-wri__opt">
+                                                <p>옵션 : 카키</p>
+                                            </div>
+                                            <div class="user-wri__con">
+                                                <pre>
+일반 접이식 우산~ 매장에서 사서 써보고
+아이들 것도 주문했어요. 우산 접을때 안전캡이 있어서
+좋아요.
+                                                </pre>
+                                            </div>
+                                            <button class="help-cou">
+                                                <span>도움돼요</span>
+                                                <span class="help-btn">
+                                                    <i>도움돼요버튼</i>
+                                                </span>
+                                                <span>1</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="product-riv__con-wir">
+                                        <div class="user">
+                                            <div class="user__wrap">
+                                                <div class="user-img">
+                                                    <img src="https://www.daisomall.co.kr/images/icon/profile_noimg.png"
+                                                        alt="user-img">
+                                                </div>
+                                                <div class="user-id">
+                                                    <p>yoa****</p>
+                                                </div>
+                                                <div class="user-sco">
+                                                    <span class="star"><i>별</i></span>
+                                                    <span class="score">5점</span>
+                                                    <span>2024-11-06</span>
+                                                </div>
+                                            </div>
+                                            <button class="report">
+                                                <span>
+                                                    <i>신고하기버튼</i>
+                                                </span>
+                                                <div class="report-act">
+                                                    <p>신고하기</p>
+                                                </div>
+                                            </button>
+                                        </div>
+                                        <div class="user-rating">
+                                            <div class="user-color">
+                                                <span>색상</span>
+                                                <span>화면과 같아요</span>
+                                            </div>
+                                            <div class="user-des">
+                                                <span>디자인</span>
+                                                <span>마음에 들어요</span>
+                                            </div>
+                                            <div class="user-siz">
+                                                <span>크기</span>
+                                                <span>적당해요</span>
+                                            </div>
+                                        </div>
+                                        <div class="user-wri">
+                                            <div class="user-wri__opt">
+                                                <p>옵션 : 카키</p>
+                                            </div>
+                                            <div class="user-wri__con">
+                                                <pre>
+일반 접이식 우산~ 매장에서 사서 써보고
+아이들 것도 주문했어요. 우산 접을때 안전캡이 있어서
+좋아요.
+                                                </pre>
+                                            </div>
+                                            <button class="help-cou">
+                                                <span>도움돼요</span>
+                                                <span class="help-btn">
+                                                    <i>도움돼요버튼</i>
+                                                </span>
+                                                <span>1</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="product-riv__con-wir">
+                                        <div class="user">
+                                            <div class="user__wrap">
+                                                <div class="user-img">
+                                                    <img src="https://www.daisomall.co.kr/images/icon/profile_noimg.png"
+                                                        alt="user-img">
+                                                </div>
+                                                <div class="user-id">
+                                                    <p>yoo****</p>
+                                                </div>
+                                                <div class="user-sco">
+                                                    <span class="star"><i>별</i></span>
+                                                    <span class="score">5점</span>
+                                                    <span>2024-11-06</span>
+                                                </div>
+                                            </div>
+                                            <button class="report">
+                                                <span>
+                                                    <i>신고하기버튼</i>
+                                                </span>
+                                                <div class="report-act">
+                                                    <p>신고하기</p>
+                                                </div>
+                                            </button>
+                                        </div>
+                                        <div class="user-rating">
+                                            <div class="user-color">
+                                                <span>색상</span>
+                                                <span>화면과 같아요</span>
+                                            </div>
+                                            <div class="user-des">
+                                                <span>디자인</span>
+                                                <span>마음에 들어요</span>
+                                            </div>
+                                            <div class="user-siz">
+                                                <span>크기</span>
+                                                <span>적당해요</span>
+                                            </div>
+                                        </div>
+                                        <div class="user-wri">
+                                            <div class="user-wri__opt">
+                                                <p>옵션 : 카키</p>
+                                            </div>
+                                            <div class="user-wri__con">
+                                                <pre>
+일반 접이식 우산~ 매장에서 사서 써보고
+아이들 것도 주문했어요. 우산 접을때 안전캡이 있어서
+좋아요.
+                                                </pre>
+                                            </div>
+                                            <button class="help-cou">
+                                                <span>도움돼요</span>
+                                                <span class="help-btn">
+                                                    <i>도움돼요버튼</i>
+                                                </span>
+                                                <span>1</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+
                         <!-- 상품정보 -->
                         <div id="product-inf">
                             <div data-v-3cf343c0="" class="tab-cont info">

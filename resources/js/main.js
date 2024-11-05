@@ -11,6 +11,28 @@ $(".el-collapse-item__wrap").on("click", function () {
 });
 
 
+const radioButtons = document.querySelectorAll('.el-radio-button__orig-radio');
+
+radioButtons.forEach((radio) => {
+    radio.addEventListener('click', () => {
+        // 모든 라디오 버튼의 부모 요소에서 active 클래스 제거
+        radioButtons.forEach((btn) => {
+            btn.parentElement.classList.remove('active');
+            // 부모의 부모 요소 배경색 제거
+            btn.parentElement.parentElement.style.border = '';
+        });
+
+        // 클릭된 라디오 버튼의 부모 요소에 active 클래스 추가
+        radio.parentElement.classList.add('active');
+
+        // 부모 요소에 active 클래스가 있는 경우 그 부모의 부모 요소 배경색 설정
+        if (radio.parentElement.classList.contains('active')) {
+            radio.parentElement.parentElement.style.border = '2px solid #067dfd';
+        }
+    });
+});
+
+
 $(document).ready(function () {
     $('.product-cont__lst a').on('click', function (e) {
         e.preventDefault(); // 기본 앵커 클릭 동작을 방지
@@ -27,4 +49,22 @@ $(document).ready(function () {
 
         $('html, body').animate({ scrollTop: targetPosition }, 500);
     });
+});
+
+// 신고하기 버튼
+$(".report").on("click", function (event) {
+    // 이벤트가 document로 전파되지 않도록 방지
+    event.stopPropagation();
+
+    // 모든 .report-act 요소에서 active 클래스를 제거
+    $(".report-act").removeClass("active");
+
+    // 클릭된 요소와 가장 가까운 .report-act 요소에 active 클래스를 추가
+    const $reportAct = $(this).closest(".report").find(".report-act");
+    $reportAct.addClass("active");
+});
+
+// document의 다른 부분을 클릭하면 active 클래스를 제거
+$(document).on("click", function () {
+    $(".report-act").removeClass("active");
 });

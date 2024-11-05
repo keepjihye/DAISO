@@ -264,6 +264,410 @@ body {
 
 .tit-area {
     padding: 10px 0;
-    h2 {
+    border-bottom: 2px solid black;
+    font-size: 2.2rem;
+}
+
+// 리뷰
+.product-riv__tit {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    em {
+        color: $primary;
+    }
+}
+
+.product-riv__rate {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    font-size: 3.2rem;
+    strong {
+        font-weight: 900;
+    }
+    .rate__icons {
+        padding-left: 10px;
+        display: flex;
+        gap: 5px;
+    }
+    .rate__icon {
+        i {
+            @include sr-only;
+        }
+        &::after {
+            @include lineAwesome;
+            content: "\f005";
+            color: $primary;
+            font-size: 2.5rem;
+        }
+    }
+}
+
+.product-riv__cat {
+    width: 100%;
+    height: 100%;
+    .product-riv__cat-tit {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        span {
+            display: block;
+            width: 80px;
+            height: 40px;
+            font-size: 1.6rem;
+            background: #fceded;
+            color: $primary;
+            border-radius: 20px;
+            font-weight: bold;
+            padding: 8px 16px;
+        }
+        .color-tit {
+            display: flex;
+            font-weight: bold;
+            align-items: center;
+            gap: 10px;
+            strong {
+                font-size: 2.5rem;
+                color: $primary;
+                font-weight: 900;
+            }
+        }
+    }
+}
+.product-riv__cat-wrap {
+    display: flex;
+    gap: 10px;
+}
+.el-collapse-item__wrap {
+    background-color: #f7f8f9;
+    padding: 15px;
+    border-radius: 10px;
+    .el-collapse-item__content {
+        padding: 10px 0;
+        height: 100%;
+        .rating-score-list {
+            display: flex;
+            justify-content: space-between;
+            span {
+                font-weight: bold;
+            }
+        }
+        .progressbar {
+            height: 4px;
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .bar1 {
+            background-color: $primary;
+        }
+        .bar2 {
+            background-color: $gray-30;
+        }
+        .bar3 {
+            background-color: $gray-30;
+        }
+    }
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    background-color: $gray-10;
+    margin: 30px 0;
+}
+
+// 리뷰 스와이퍼
+.product-riv__img__tit {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    .more {
+        display: flex;
+        align-items: center;
+        p {
+            font-size: 1.6rem;
+            color: $gray-70;
+        }
+        i {
+            @include sr-only;
+        }
+        span {
+            height: 100%;
+            width: 100%;
+            &::after {
+                display: block;
+                content: "";
+                background-image: url(../../images/more_btn.svg);
+                background-repeat: no-repeat;
+                background-size: contain;
+                display: block;
+                height: 19px;
+                margin-left: 8px;
+                width: 19px;
+            }
+        }
+    }
+}
+.swiper-review {
+    .goods-thumb-container {
+        position: relative;
+        height: 143px;
+        width: 100%;
+        .swiper {
+            width: 100%;
+            height: 100%;
+        }
+        .slide1 {
+            background-color: $primary;
+            color: $white;
+            font-size: 3.5rem;
+            border-radius: 5px;
+        }
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 120px;
+            height: 120px;
+
+            img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                border-radius: 5px;
+            }
+        }
+        &:hover {
+            .swiper-button-next,
+            .swiper-button-prev {
+                opacity: 1;
+            }
+        }
+
+        // swiper button
+        .swiper-button-next,
+        .swiper-button-prev {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            opacity: 0;
+            transition: 0.9s;
+        }
+        .swiper-button-next {
+            right: 0;
+            top: 70px;
+        }
+
+        .swiper-button-prev {
+            left: 115px;
+            top: 70px;
+        }
+
+        .swiper-button-next::after,
+        .swiper-button-prev::after {
+            display: none;
+        }
+        .swiper-button-prev::before {
+            background-color: $gray-80;
+            content: "\f104";
+        }
+        .swiper-button-next::before {
+            background-color: $gray-80;
+            content: "\f105";
+        }
+        .swiper-button-disabled {
+            display: none;
+        }
+        .swiper-button-next::before,
+        .swiper-button-prev::before {
+            @include lineAwesome;
+            font-size: 2rem;
+            color: $white;
+            opacity: 0.6;
+            padding: 0 5px;
+        }
+        .swiper-slide-thumb-active {
+            border: 1px solid $black;
+        }
+    }
+}
+
+.product-riv__con {
+    padding: 30px 0;
+    .product-cont__con-tit-wrap {
+        display: flex;
+        justify-content: space-between;
+        .product-riv__con-tit {
+            font-size: 1.8rem;
+            color: $gray-90;
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            input[type="radio"] {
+                -webkit-appearance: none; // 웹킷 브라우저에서 기본 스타일 제거
+                -moz-appearance: none; // 모질라 브라우저에서 기본 스타일 제거
+                appearance: none; // 기본 브라우저에서 기본 스타일 제거
+                width: 20px;
+                height: 20px;
+                border: 1px solid #ccc; // 체크되지 않았을 때의 테두리 색상
+                border-radius: 50%;
+                outline: none; // focus 시에 나타나는 기본 스타일 제거
+                cursor: pointer;
+            }
+            // 체크 시 버튼 모양 스타일
+            input[type="radio"]:checked {
+                background-color: $white; // 체크 시 내부 원 색상
+                border: 4px solid black; // 라인이 아닌, 라인과 원 사이 색상
+                box-shadow: 0 0 0 1px #111; // 라인
+            }
+        }
+        .option-order {
+            width: 20%;
+            height: 100%;
+            select {
+                width: 100%;
+                padding: 5px;
+                border-radius: 5px;
+                color: $black;
+                border-color: $gray-20;
+                font-size: 1.6rem;
+            }
+        }
+    }
+}
+
+// 리뷰 내용
+.product-riv__con-wir-wrap {
+    margin-top: 20px;
+    border-top: 2px solid black;
+    .product-riv__con-wir {
+        padding: 20px;
+        border-bottom: 1px solid #dcdcdc;
+        .user {
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 10px;
+
+            .user__wrap {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                .user-img {
+                    img {
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                    }
+                }
+                .user-id {
+                    font-size: 1.8rem;
+                    font-weight: bold;
+                }
+                .user-sco {
+                    .star {
+                        i {
+                            @include sr-only;
+                        }
+                        &::after {
+                            @include lineAwesome;
+                            content: "\f005";
+                            color: $primary;
+                            font-size: 1.5rem;
+                        }
+                    }
+                    .score {
+                        padding-right: 5px;
+                        border-right: 1px solid #ccc;
+                    }
+                    span {
+                        color: $gray-70;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.report {
+    position: relative;
+    span {
+        i {
+            @include sr-only;
+        }
+        &::after {
+            @include lineAwesome;
+            content: "\f142";
+            font-size: 4rem;
+            color: $gray-70;
+        }
+    }
+    .report-act {
+        display: none;
+        position: absolute;
+        padding: 10px 20px;
+        top: 50px;
+        right: 10px;
+        border: 1px solid #ededed;
+        font-weight: 600;
+        background-color: $white;
+        &.active {
+            display: block;
+        }
+    }
+}
+
+.user-rating {
+    display: flex;
+    gap: 1%;
+    padding: 15px 10px;
+    background-color: #f7f8f9;
+    div {
+        width: 33%;
+        span:first-child {
+            color: $gray-70;
+            padding-right: 10px;
+        }
+    }
+}
+
+.user-wri {
+    padding-top: 10px;
+    .user-wri__opt {
+        margin-bottom: 5px;
+        color: $gray-70;
+    }
+    .user-wri__con {
+        pre {
+            margin: 0;
+        }
+    }
+    .help-cou {
+        display: flex;
+        align-items: center;
+        span:first-child {
+            color: $gray-60;
+            font-weight: bold;
+        }
+        .help-btn {
+            i {
+                @include sr-only;
+            }
+            &::after {
+                @include lineAwesome;
+                content: "\f164";
+                font-size: 2.2rem;
+                color: $gray-70;
+            }
+        }
     }
 }
