@@ -3415,4 +3415,68 @@ input[type=checkbox] {
 }
 .guide-benefit .el-tabs__nav is-to .el-tabs__active-bar is-top {
   width: 318px;
+}
+
+.editor-area {
+  margin: 40px auto 0;
+  width: 750px;
+  text-align: center;
+  border: 0;
+}
+
+.tab-wrap {
+  width: 100%;
+}
+.tab-wrap .el-tabs__header {
+  margin-bottom: 0;
+}
+.tab-wrap .el-tabs .el-tabs__nav {
+  align-items: center;
+  border-bottom: 1px solid #28323c;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  transform: translateX(0px);
+  float: left;
+  position: relative;
+  transition: transform 3s;
+  white-space: nowrap;
+  z-index: 2;
+}
+.tab-wrap .el-tabs .el-tabs__active-bar {
+  display: block;
+  height: 3px;
+  background-color: #d70011;
+}
+
+.detail-tab {
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+.detail-tab .report-area {
+  margin: 40px auto 0;
+  width: 750px;
+}
+
+.el-tabs__header {
+  margin: 0 0 15px;
+  padding: 0;
+  position: relative;
+}
+
+.el-tabs__nav-wrap {
+  margin-bottom: -1px;
+  overflow: hidden;
+  position: relative;
+}
+
+.el-tabs__nav-scroll {
+  overflow: hidden;
+}
+
+.el-tabs__active-bar is-top {
+  width: 318px;
+  transform: translateX(0px);
 }/*# sourceMappingURL=style.css.map */
