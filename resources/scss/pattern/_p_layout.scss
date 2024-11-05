@@ -61,7 +61,7 @@
         }
 
         &::after {
-            content: "";
+            content: '';
             background-image: url(https://cdn.daisomall.co.kr/apps/f/c7ed989e2/img/ico_prod_share.539caf2.svg);
             background-repeat: no-repeat;
             background-position: 50%;
@@ -78,64 +78,125 @@
     position: relative;
     .guide__tit {
         line-height: 21px;
-    }
-    .el-collapse-item {
-        font-size: 16px;
-        position: relative;
-        .ico-wrap {
-            width: 20px;
-            height: 20px;
-            margin-right: 16px;
-        }
-        .acco-tit em {
-            color: #067dfd;
-        }
-        .el-collapse-item__wrap {
-            font-size: 16px;
-            color: #646f7c;
-            display: flex;
-            padding: 10px 0;
-            border-bottom: 1px solid $gray-10;
-        }
-        .el-collapse-item__wrap-con {
-            display: none;
-            width: 100%;
-            height: 70px;
-            background-color: $gray-5;
-            padding: 24px 36px;
-            &.active {
-                display: block;
-            }
-        }
-    }
-    .el-collapse-item__header {
-        font-size: 16px;
-        position: relative;
-        .ico-wrap {
-            width: 20px;
-            height: 20px;
-            margin-right: 16px;
-        }
-        .el-collapse-item__arrow {
-            p {
-                @include sr-only;
-            }
-            &::after {
-                content: "\f107";
-                font-family: "Line Awesome Free";
-                font-weight: 900;
-            }
-        }
-        .el-collapse-item__wrap {
-            .inner-list a {
-                color: #067dfd;
-            }
-        }
+        font-weight: bold;
     }
     .item-tit {
         width: 100%;
         p {
             display: inline;
+        }
+    }
+    .el-collapse-item-1 {
+        font-size: 16px;
+        position: relative;
+        .ico-wrap-1 {
+            width: 20px;
+            height: 20px;
+            margin-right: 16px;
+        }
+        .acco-tit-1 em {
+            color: #067dfd;
+        }
+        .el-collapse-item__wrap-1 {
+            font-size: 16px;
+            color: #28323c;
+            display: flex;
+            padding: 10px 0;
+            border-bottom: 1px solid $gray-10;
+        }
+        .el-collapse-item__wrap-con-1 {
+            display: none;
+            width: 100%;
+            height: 70px;
+            background-color: $gray-5;
+            padding: 24px 36px;
+            color: #646f7c;
+            &.active {
+                display: block;
+            }
+        }
+    }
+    .el-collapse-item__header-1 {
+        font-size: 16px;
+        position: relative;
+        .ico-wrap {
+            width: 20px;
+            height: 20px;
+            margin-right: 16px;
+        }
+        .el-collapse-item__arrow-1 {
+            p {
+                @include sr-only;
+            }
+            &::after {
+                content: '\f107';
+                font-family: 'Line Awesome Free';
+                font-weight: 900;
+            }
+        }
+        .el-collapse-item__wrap-1 {
+            .inner-list a {
+                color: #067dfd;
+            }
+        }
+    }
+    .el-collapse-item-2 {
+        font-size: 16px;
+        position: relative;
+        .ico-wrap-2 {
+            width: 20px;
+            height: 20px;
+            margin-right: 16px;
+        }
+        .acco-tit-2 em {
+            color: #067dfd;
+        }
+        .el-collapse-item__wrap-2 {
+            width: 100%;
+            font-size: 16px;
+            color: #28323c;
+            display: flex;
+            padding: 10px 0;
+            border-bottom: 1px solid $gray-10;
+            .acco-tit-2 {
+                width: 92%;
+            }
+        }
+        .el-collapse-item__wrap-con-2 {
+            display: none;
+            width: 100%;
+            height: 230px;
+            background-color: $gray-5;
+            padding: 24px 36px;
+            color: #646f7c;
+            &.active {
+                display: block;
+            }
+        }
+    }
+    .el-collapse-item__header-2 {
+        width: 100%;
+        font-size: 16px;
+        position: relative;
+        .ico-wrap-2 {
+            width: 20px;
+            height: 20px;
+            margin-right: 16px;
+        }
+        .el-collapse-item__arrow-2 {
+            p {
+                @include sr-only;
+            }
+            &::after {
+                content: '\f107';
+                font-family: 'Line Awesome Free';
+                font-weight: 900;
+            }
+        }
+        .el-collapse-item__wrap-con-2 {
+            .inner-list a {
+                color: #067dfd;
+            }
         }
     }
 }
@@ -173,9 +234,62 @@
         position: relative;
         width: 100%;
         &::before {
-            background: url(https://cdn.daisomall.co.kr/apps/f/e8a827a9f/img/ico_purchase_delivery.5d92348.png)
-                no-repeat 0 0 / 50px 50px;
-            content: "";
+            background: url(https://cdn.daisomall.co.kr/apps/f/e8a827a9f/img/ico_purchase_delivery.5d92348.png) no-repeat 0 0 / 50px 50px;
+            content: '';
+            height: 50px;
+            left: 50%;
+            position: absolute;
+            transform: translateX(-50%);
+            width: 50px;
+            z-index: 1;
+        }
+        .tit-h6 {
+            display: block;
+            margin-top: 58px;
+            text-align: center;
+            span {
+                display: block;
+                font-size: 1.4rem;
+            }
+        }
+    }
+}
+.el-radio-group__2 {
+    .el-radio-button {
+        display: inline-block;
+        outline: 0;
+        position: relative;
+        width: 100%;
+        &::before {
+            background: url(https://cdn.daisomall.co.kr/apps/f/e8a827a9f/img/ico_purchase_pickup.3e0a9f5.png) no-repeat 0 0 / 50px 50px;
+            content: '';
+            height: 50px;
+            left: 50%;
+            position: absolute;
+            transform: translateX(-50%);
+            width: 50px;
+            z-index: 1;
+        }
+        .tit-h6 {
+            display: block;
+            margin-top: 58px;
+            text-align: center;
+            span {
+                display: block;
+                font-size: 1.4rem;
+            }
+        }
+    }
+}
+.el-radio-group__3 {
+    .el-radio-button {
+        display: inline-block;
+        outline: 0;
+        position: relative;
+        width: 100%;
+        &::before {
+            background: url(https://cdn.daisomall.co.kr/apps/f/e8a827a9f/img/ico_purchase_bulk.05529a6.png) no-repeat 0 0 / 50px 50px;
+            content: '';
             height: 50px;
             left: 50%;
             position: absolute;
