@@ -68,3 +68,12 @@ $(".report").on("click", function (event) {
 $(document).on("click", function () {
     $(".report-act").removeClass("active");
 });
+
+// 도움돼요 버튼
+$(".help-cou").on("click", function () {
+    if ($(this).hasClass("active")) {
+        $(this).removeClass("active");
+    } else {
+        $(this).addClass("active");
+    }
+});

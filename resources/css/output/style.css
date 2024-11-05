@@ -3825,9 +3825,12 @@ body {
 .user-wri .help-cou {
   display: flex;
   align-items: center;
+  color: #717171;
+}
+.user-wri .help-cou.active {
+  color: #067dfd;
 }
 .user-wri .help-cou span:first-child {
-  color: #717171;
   font-weight: bold;
 }
 .user-wri .help-cou .help-btn i {
@@ -3846,7 +3849,6 @@ body {
   font-weight: 900;
   content: "\f164";
   font-size: 2.2rem;
-  color: #555555;
 }
 
 .goods-thumb-swiper {
