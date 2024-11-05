@@ -301,3 +301,38 @@
   width: 318px;
   transform: translateX(0px);
 }
+// 상품 리뷰란 css
+.tab-cont info {
+  margin: 8px 16px 0;
+}
+.in-wrap {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  padding: 0 16px;
+  .tab-cont-info {
+    background-color: $white;
+    height: auto;
+    margin: 0;
+    position: relative;
+  }
+}
+.tit-area {
+  color: #28323c;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1;
+  align-items: center;
+  display: flex;
+  background-color: $white;
+  .tit-h2 {
+    font-size: 1.4rem;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+    margin: 0;
+  }
+}
