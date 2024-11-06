@@ -3349,140 +3349,8 @@ input[type=checkbox] {
   border: 1px solid #000;
 }
 
-.goods-detail .goods-price__value {
-  font-size: 32px;
-  display: inline-block;
-  font-weight: 700;
-  padding-top: 2px;
-}
-.goods-detail .goods-price__won {
-  font-size: 28px;
-  display: inline-block;
-  font-weight: 700;
-}
-
-.goods-tit {
-  font-size: 24px;
-  margin: 12px 0 0;
-}
-
-.guide-benefit {
-  margin-top: 32px;
-  position: relative;
-}
-.guide-benefit .guide__tit {
-  line-height: 21px;
-  margin: 0;
-  text-align: left;
-  font-size: 18px;
-  font-weight: 700;
-  display: flex;
-}
-.guide-benefit .el-collapse {
-  border-top: 0;
-  margin: 0;
-}
-.guide-benefit .el-collapse-item .acco-tit {
-  font-size: 16px;
-  padding: 16px 0;
-  display: flex;
-  align-items: center;
-}
-.guide-benefit .el-collapse-item .ico-wrap {
-  margin-right: 16px;
-  height: 20px;
-  width: 20px;
-}
-.guide-benefit .event1 {
-  color: #067dfd;
-  display: flex;
-}
-.guide-benefit .event1 .el-collapse-item__arrow {
-  box-sizing: border-box;
-  font-size: 20px;
-}
-.guide-benefit .el-collapse-item__content {
-  background-color: #f7f8f9;
-  border-bottom: 0;
-  border-top: 1px solid #f7f8f9;
-  box-sizing: border-box;
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-}
-.guide-benefit .el-tabs__nav is-to {
-  transform: translateX(0px);
-}
-.guide-benefit .el-tabs__nav is-to .el-tabs__active-bar is-top {
-  width: 318px;
-}
-
-.editor-area {
-  margin: 40px auto 0;
-  width: 750px;
-  text-align: center;
-  border: 0;
-}
-
-.tab-wrap {
-  width: 100%;
-}
-.tab-wrap .el-tabs__header {
-  margin-bottom: 0;
-}
-.tab-wrap .el-tabs .el-tabs__nav {
-  align-items: center;
-  border-bottom: 1px solid #28323c;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  transform: translateX(0px);
-  float: left;
-  position: relative;
-  transition: transform 3s;
-  white-space: nowrap;
-  z-index: 2;
-}
-.tab-wrap .el-tabs .el-tabs__active-bar {
-  display: block;
-  height: 3px;
-  background-color: #d70011;
-}
-
-.detail-tab {
-  background: #fff;
-  position: sticky;
-  top: 0;
-  z-index: 999;
-}
-.detail-tab .report-area {
-  margin: 40px auto 0;
-  width: 750px;
-}
-
-.el-tabs__header {
-  margin: 0 0 15px;
-  padding: 0;
-  position: relative;
-}
-
-.el-tabs__nav-wrap {
-  margin-bottom: -1px;
-  overflow: hidden;
-  position: relative;
-}
-
-.el-tabs__nav-scroll {
-  overflow: hidden;
-}
-
-.el-tabs__active-bar is-top {
-  width: 318px;
-  transform: translateX(0px);
-}
-
 .tab-cont info {
-  margin: 8px 16px 0;
+  margin-top: 80px;
 }
 
 .in-wrap {
@@ -3499,21 +3367,99 @@ input[type=checkbox] {
 }
 
 .tit-area {
-  color: #28323c;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1;
-  align-items: center;
+  align-items: flex-end;
   display: flex;
-  background-color: #fff;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 24px 0 16px;
+  position: relative;
 }
 .tit-area .tit-h2 {
-  font-size: 1.4rem;
-  display: block;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  unicode-bidi: isolate;
+  font-size: 2.8rem;
+  color: #161d24;
   margin: 0;
+  min-width: 50%;
+  text-align: left;
+  display: block;
+  font-weight: 700;
+}
+.tit-area .info-list {
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+}
+.tit-area .info-list .data {
+  border-bottom: 1px solid #e9ebee;
+  border-top: 2px solid #28323c;
+  margin: 16px 0 8px;
+  text-align: left;
+}
+
+.item {
+  line-height: 24px;
+  min-height: auto;
+  padding: 16px 0 16px 24px;
+  width: 260px;
+  color: #c5c8ce;
+  font-weight: 400;
+  height: auto;
+  display: inline;
+}
+
+.val {
+  min-height: auto;
+  padding: 16px 24px 16px 48px;
+  width: calc(100% - 260px);
+  height: auto;
+  display: inline;
+  font-size: 16px;
+  line-height: 19px;
+  color: #28323c;
+  font-weight: 400;
+}
+
+.info-list > li {
+  display: flex;
+  list-style: none;
+}
+
+.info-list-data > li {
+  display: flex;
+  border-top: 1px solid #e9ebee;
+  flex-flow: wrap;
+  list-style: none;
+}
+
+.info-list > li > div {
+  display: block;
+  position: relative;
+  word-break: keep-all;
+}
+
+.tit-h4 {
+  margin: 56px 0 16px;
+  font-size: 2.2rem;
+  text-align: left;
+  color: #161d24;
+  display: block;
+  font-weight: 700;
+}
+
+.txt-list-dot {
+  margin: 12px 0 0;
+  padding-left: 12px;
+}
+
+.txt-list-box {
+  line-height: 24px;
+  margin-top: 12px;
+}
+
+.txt-list-tit {
+  display: block;
+  margin-top: 12px;
+}
+
+.txt-list-dot li::before {
+  content: "• ";
+  color: #28323c;
 }/*# sourceMappingURL=style.css.map */
