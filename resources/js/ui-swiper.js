@@ -28,3 +28,26 @@ var swiper2 = new Swiper(".swiper__main", {
         }
     },
 });
+
+var swiper3 = new Swiper(".swiper-review", {
+    spaceBetween: 5,
+    slidesPerView: 12,
+    freeMode: true,
+    watchSlidesProgress: true,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+});
+
+
+var swiper4 = new Swiper(".swiper-pic", {
+    spaceBetween: 5,
+    slidesPerView: 8,
+    freeMode: true,
+    watchSlidesProgress: true,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+});

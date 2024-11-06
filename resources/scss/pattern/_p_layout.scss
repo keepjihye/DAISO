@@ -10,6 +10,9 @@
     height: 100%;
     // width: 100%;
     min-width: 1280px;
+    .product-riv__img {
+        padding: 200px 0;
+    }
 }
 
 .page-tit-area {
@@ -21,6 +24,10 @@
 .goods-thumb-wrap {
     width: 570px;
     height: 100%;
+    align-self: flex-start;
+    left: 0;
+    position: sticky;
+    top: 16px;
 }
 
 .goods-detail {
@@ -156,6 +163,10 @@
 .el-radio-group {
     width: 100%;
     height: 100%;
+    input[type="radio"],
+    input[type="checkbox"] {
+        @include sr-only;
+    }
     .el-radio {
         width: 150px;
         height: 150px;
@@ -199,7 +210,7 @@
 .el-select {
     width: 100%;
     height: 100%;
-    margin-top: 20px;
+    margin: 30px 0;
 
     select {
         width: 100%;
@@ -210,7 +221,16 @@
         font-size: 1.6rem;
     }
 }
+#product-des {
+    padding-top: 50px;
+}
+#product-riv {
+    padding-top: 50px;
+}
 
+#product-inf {
+    padding-top: 50px;
+}
 // review.html
 .product-wrap {
     .inner {
@@ -247,6 +267,89 @@
                         display: block;
                     }
                 }
+            }
+        }
+    }
+    .swiper-pic {
+        .goods-thumb-container {
+            position: relative;
+            height: 143px;
+            width: 100%;
+            .swiper {
+                width: 100%;
+                height: 100%;
+            }
+            .slide1 {
+                background-color: $primary;
+                color: $white;
+                font-size: 3.5rem;
+                border-radius: 5px;
+            }
+            .swiper-slide {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 110px;
+                height: 110px;
+
+                img {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 5px;
+                }
+            }
+            &:hover {
+                .swiper-button-next,
+                .swiper-button-prev {
+                    opacity: 1;
+                }
+            }
+
+            // swiper button
+            .swiper-button-next,
+            .swiper-button-prev {
+                position: absolute;
+                width: 30px;
+                height: 30px;
+                opacity: 0;
+                transition: 0.9s;
+            }
+            .swiper-button-next {
+                right: 0;
+                top: 60px;
+            }
+
+            .swiper-button-prev {
+                left: 110px;
+                top: 60px;
+            }
+
+            .swiper-button-next::after,
+            .swiper-button-prev::after {
+                display: none;
+            }
+            .swiper-button-prev::before {
+                background-color: $gray-80;
+                content: "\f104";
+            }
+            .swiper-button-next::before {
+                background-color: $gray-80;
+                content: "\f105";
+            }
+            .swiper-button-disabled {
+                display: none;
+            }
+            .swiper-button-next::before,
+            .swiper-button-prev::before {
+                @include lineAwesome;
+                font-size: 2rem;
+                color: $white;
+                opacity: 0.6;
+                padding: 0 5px;
+            }
+            .swiper-slide-thumb-active {
+                border: 1px solid $black;
             }
         }
     }
@@ -302,6 +405,7 @@
     width: 100%;
     height: 100%;
     .product-riv__cat-tit {
+        width: 100%;
         display: flex;
         gap: 5px;
         align-items: center;
@@ -375,6 +479,32 @@
 }
 
 // 리뷰 스와이퍼
+.product-riv__img {
+    .product-riv__img__tit {
+        padding-bottom: 30px;
+    }
+    .product-riv__img__txt {
+        display: flex;
+        align-items: flex-end;
+        span {
+            color: $gray-60;
+            font-size: 1.6rem;
+        }
+        .star {
+            padding-left: 15px;
+            padding-right: 5px;
+            i {
+                @include sr-only;
+            }
+            &::after {
+                @include lineAwesome;
+                content: "\f005";
+
+                font-size: 1.4rem;
+            }
+        }
+    }
+}
 .product-riv__img__tit {
     width: 100%;
     display: flex;
@@ -408,6 +538,7 @@
         }
     }
 }
+
 .swiper-review {
     .goods-thumb-container {
         position: relative;
@@ -427,8 +558,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 120px;
-            height: 120px;
+            width: 110px;
+            height: 110px;
 
             img {
                 display: block;
@@ -455,12 +586,12 @@
         }
         .swiper-button-next {
             right: 0;
-            top: 70px;
+            top: 60px;
         }
 
         .swiper-button-prev {
-            left: 120px;
-            top: 70px;
+            left: 110px;
+            top: 60px;
         }
 
         .swiper-button-next::after,
@@ -673,7 +804,7 @@
     top: 24px;
     width: 300px;
     z-index: 998;
-    height: 400px;
+    height: 480px;
     padding: 24px 0;
     .product-side__top {
         padding: 0 24px;
@@ -694,59 +825,94 @@
             padding: 13px 50px 13px 16px;
         }
     }
+}
 
-    .buy {
-        width: 100%;
-        align-items: center;
-        border-top: 1px solid #e9ebee;
+.buy {
+    width: 100%;
+    align-items: center;
+    border-top: 1px solid #e9ebee;
+    display: flex;
+    font-weight: 700;
+    justify-content: space-between;
+    padding: 16px 24px;
+    .price {
         display: flex;
-        font-weight: 700;
-        justify-content: space-between;
-        margin-top: 20px;
-        padding: 16px 24px;
-        .price {
-            display: flex;
-            font-size: 2.2rem;
-            span {
-                font-weight: 900;
-                color: $primary;
+        font-size: 2.2rem;
+        span {
+            font-weight: 900;
+            color: $primary;
+        }
+    }
+}
+
+.button-wrap {
+    display: flex;
+    padding: 0 24px;
+    gap: 10px;
+    .like {
+        width: 64px;
+        height: 64px;
+        background-color: $white;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        color: $black;
+        &.active {
+            color: $primary;
+        }
+        span {
+            i {
+                @include sr-only;
+            }
+            &::after {
+                @include lineAwesome;
+                content: "\f004";
+
+                font-size: 2.5rem;
             }
         }
     }
+    .basket {
+        width: 100%;
+        height: 64px;
+        padding: 0 40px;
+        border-radius: 5px;
+        background-color: $primary;
+        color: $white;
+    }
+    .dir-buy {
+        width: 100%;
+        height: 64px;
+        padding: 0 40px;
+        background-color: $white;
+        border: 1px solid $primary;
+        border-radius: 5px;
+        color: $primary;
+    }
+}
 
+.goods-detail {
+    .buy {
+        padding: 16px 0;
+    }
     .button-wrap {
-        display: flex;
-        padding: 0 24px;
-        gap: 10px;
-        .like {
-            width: 64px;
-            height: 64px;
-            background-color: $white;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-            color: $black;
-            &.active {
-                color: $primary;
-            }
-            span {
-                i {
-                    @include sr-only;
-                }
-                &::after {
-                    @include lineAwesome;
-                    content: "\f004";
-
-                    font-size: 2.5rem;
-                }
-            }
-        }
+        justify-content: space-between;
+        padding: 0;
+        margin-top: 30px;
+        .dir-buy,
         .basket {
-            height: 64px;
-            padding: 0 40px;
-            background-color: $white;
-            border-radius: 5px;
-            background-color: $primary;
-            color: $white;
+            width: 44%;
+        }
+    }
+}
+
+.product-side {
+    .button-wrap {
+        flex-wrap: wrap;
+        .basket {
+            width: 100%;
+        }
+        .dir-buy {
+            width: 68%;
         }
     }
 }
