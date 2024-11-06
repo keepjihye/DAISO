@@ -70,14 +70,6 @@ $(document).on("click", function () {
 });
 
 // 도움돼요 버튼
-// $(".help-cou").on("click", function () {
-//     if ($(this).hasClass("active")) {
-//         $(this).removeClass("active");
-//     } else {
-//         $(this).addClass("active");
-//     }
-// });
-
 $(".help-cou").on("click", function () {
     if ($(this).hasClass("active")) {
         $(this).removeClass("active");
@@ -93,5 +85,14 @@ $(".help-cou").on("click", function () {
         // 클릭 시 카운트 증가
         let count = parseInt($(this).find(".counting").text(), 10);
         $(this).find(".counting").text(count + 1);
+    }
+});
+
+// 좋아요 버튼
+$(".like").on("click", function () {
+    if ($(this).hasClass("active")) {
+        $(this).removeClass("active");
+    } else {
+        $(this).addClass("active");
     }
 });

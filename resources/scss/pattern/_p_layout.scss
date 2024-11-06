@@ -1,7 +1,4 @@
 // 그리드
-body {
-    height: 200vh;
-}
 .inner {
     width: 100%;
     height: 100%;
@@ -202,7 +199,7 @@ body {
 .el-select {
     width: 100%;
     height: 100%;
-    margin-top: 10px;
+    margin-top: 20px;
 
     select {
         width: 100%;
@@ -216,15 +213,13 @@ body {
 
 // review.html
 .product-wrap {
-    width: 100%;
-    height: 100%;
     .inner {
         display: flex;
         gap: 2%;
     }
     .product-cont {
         width: 70%;
-        height: 2000px;
+        height: 100%;
         .product-cont__nav {
             width: 100%;
 
@@ -254,11 +249,6 @@ body {
                 }
             }
         }
-    }
-    .product-side {
-        width: 28%;
-        height: 2000px;
-        background-color: #888;
     }
 }
 
@@ -469,7 +459,7 @@ body {
         }
 
         .swiper-button-prev {
-            left: 115px;
+            left: 120px;
             top: 70px;
         }
 
@@ -670,6 +660,93 @@ body {
                 content: "\f164";
                 font-size: 2.2rem;
             }
+        }
+    }
+}
+
+//product-side
+.product-side {
+    border: 1px solid #e9ebee;
+    border-radius: 8px;
+
+    position: sticky;
+    top: 24px;
+    width: 300px;
+    z-index: 998;
+    height: 400px;
+    padding: 24px 0;
+    .product-side__top {
+        padding: 0 24px;
+    }
+    .product-side__img {
+        display: flex;
+        gap: 5%;
+        img {
+            width: 35%;
+        }
+        p {
+            width: 60%;
+        }
+    }
+    .side_select {
+        select {
+            height: 56px;
+            padding: 13px 50px 13px 16px;
+        }
+    }
+
+    .buy {
+        width: 100%;
+        align-items: center;
+        border-top: 1px solid #e9ebee;
+        display: flex;
+        font-weight: 700;
+        justify-content: space-between;
+        margin-top: 20px;
+        padding: 16px 24px;
+        .price {
+            display: flex;
+            font-size: 2.2rem;
+            span {
+                font-weight: 900;
+                color: $primary;
+            }
+        }
+    }
+
+    .button-wrap {
+        display: flex;
+        padding: 0 24px;
+        gap: 10px;
+        .like {
+            width: 64px;
+            height: 64px;
+            background-color: $white;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            color: $black;
+            &.active {
+                color: $primary;
+            }
+            span {
+                i {
+                    @include sr-only;
+                }
+                &::after {
+                    @include lineAwesome;
+                    content: "\f004";
+
+                    font-size: 2.5rem;
+                }
+            }
+        }
+        .basket {
+            height: 64px;
+            padding: 0 40px;
+            background-color: $white;
+            border-radius: 5px;
+            background-color: $primary;
+            color: $white;
         }
     }
 }
