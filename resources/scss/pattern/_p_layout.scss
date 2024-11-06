@@ -228,6 +228,21 @@
             height: 20px;
         }
     }
+    .el-button__order {
+        // display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 0;
+        padding-right: 20px;
+        &::after {
+            content: '\f105';
+            font-family: 'Line Awesome Free';
+            font-weight: 900;
+            width: 20px;
+            height: 20px;
+        }
+    }
 }
 
 .el-radio-group {
@@ -321,6 +336,65 @@
                 display: block;
                 font-size: 1.4rem;
             }
+        }
+    }
+}
+
+.delivery-set {
+    margin-top: 16px;
+    .addr-cont {
+        color: #28323c;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.4;
+    }
+    .info-item-1 {
+        border-bottom: 1px solid #e9ebee;
+        padding: 16px 0;
+        p {
+            &::before {
+                content: '\f041';
+                font-family: 'Line Awesome Free';
+                font-weight: 900;
+                padding: 0 15px 0 0;
+                font-size: 23px;
+            }
+        }
+    }
+    .info-item-2 {
+        padding: 16px 0;
+        border-bottom: 1px solid #e9ebee;
+        position: relative;
+        align-items: center;
+        .info-item__large {
+            &::after {
+                background: url(https://cdn.daisomall.co.kr/apps/f/e8a827a9f/img/ico_delivery_tomorrow.160f044.svg) no-repeat 0 / auto 22px;
+                content: '';
+                display: inline-block;
+                padding-left: 75px;
+                height: 25px;
+                left: 15%;
+                bottom: 15px;
+                position: absolute;
+                width: 50px;
+                z-index: 1;
+            }
+        }
+    }
+    .info-item-3 {
+        padding: 16px 0;
+        border-bottom: 1px solid #e9ebee;
+        display: flex;
+        height: 76.79px;
+        position: relative;
+        .info-item__large__tit {
+            position: absolute;
+            height: 100%;
+        }
+        .info-item__large__con {
+            position: absolute;
+            height: 100%;
+            left: 90px;
         }
     }
 }
