@@ -70,10 +70,28 @@ $(document).on("click", function () {
 });
 
 // 도움돼요 버튼
+// $(".help-cou").on("click", function () {
+//     if ($(this).hasClass("active")) {
+//         $(this).removeClass("active");
+//     } else {
+//         $(this).addClass("active");
+//     }
+// });
+
 $(".help-cou").on("click", function () {
     if ($(this).hasClass("active")) {
         $(this).removeClass("active");
+
+        // 클릭 해제 시 카운트 감소
+        let count = parseInt($(this).find(".counting").text(), 10);
+        if (count > 0) {
+            $(this).find(".counting").text(count - 1);
+        }
     } else {
         $(this).addClass("active");
+
+        // 클릭 시 카운트 증가
+        let count = parseInt($(this).find(".counting").text(), 10);
+        $(this).find(".counting").text(count + 1);
     }
 });
