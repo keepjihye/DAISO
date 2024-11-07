@@ -3552,12 +3552,19 @@ input[type=checkbox] {
   content: "";
   display: inline-block;
   padding-left: 75px;
-  height: 25px;
-  left: 15%;
+  height: 30px;
+  left: 22%;
   bottom: 15px;
   position: absolute;
   width: 50px;
   z-index: 1;
+}
+.delivery-set .info-item-2 p::before {
+  content: "\f46c";
+  font-family: "Line Awesome Free";
+  font-weight: 900;
+  padding: 0 15px 0 0;
+  font-size: 23px;
 }
 .delivery-set .info-item-3 {
   padding: 16px 0;
@@ -3568,12 +3575,19 @@ input[type=checkbox] {
 }
 .delivery-set .info-item-3 .info-item__large__tit {
   position: absolute;
-  height: 100%;
+  top: 8px;
+  font-weight: bold;
+}
+.delivery-set .info-item-3 .info-item__large__tit::before {
+  content: "\f0d1";
+  font-family: "Line Awesome Free";
+  font-weight: 900;
+  padding: 0 15px 0 0;
+  font-size: 23px;
 }
 .delivery-set .info-item-3 .info-item__large__con {
   position: absolute;
-  height: 100%;
-  left: 90px;
+  left: 100px;
 }
 
 .goods-thumb-swiper {
