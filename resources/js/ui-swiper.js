@@ -27,4 +27,30 @@ var swiper2 = new Swiper(".swiper__main", {
             return '<span class="' + currentClass + '"></span> | <span class="' + totalClass + '"></span>';
         }
     },
+<<<<<<< HEAD
+=======
+});
+
+var swiper3 = new Swiper(".swiper-review", {
+    spaceBetween: 5,
+    slidesPerView: 12,
+    freeMode: true,
+    watchSlidesProgress: true,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+});
+
+
+var swiper4 = new Swiper(".swiper-pic", {
+    spaceBetween: 5,
+    slidesPerView: 8,
+    freeMode: true,
+    watchSlidesProgress: true,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+>>>>>>> 50a78ed16b6bcaacf649407ac26747b95f75204f
 });
