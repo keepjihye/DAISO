@@ -305,6 +305,9 @@
 // }
 
 // 상품 리뷰란 css
+.inner {
+  width: 953px;
+}
 .tab-cont info {
   margin-top: 80px;
 }
@@ -353,11 +356,16 @@
   padding: 16px 0 16px 24px;
   width: 260px;
   color: #c5c8ce;
+  font-size: 1.6rem;
   font-weight: 400;
   height: auto;
   display: inline;
 }
 .val {
+  word-wrap: break-word;
+  margin: 0;
+  white-space: 0;
+  word-break: break-all;
   min-height: auto;
   padding: 16px 24px 16px 48px;
   width: calc(100% - 260px);
@@ -391,7 +399,14 @@
   display: block;
   font-weight: 700;
 }
-.txt-list-dot {
+.txt-list {
+  font-size: 1.6rem;
+  margin-top: 12px;
+  position: relative;
+  text-align: left;
+  word-break: keep-all;
+}
+.txt-list-dot > li {
   margin: 12px 0 0;
   padding-left: 12px;
 }
@@ -407,3 +422,12 @@
   content: "• ";
   color: #28323c;
 }
+.txt-list > li:nth-of-type(n + 2) {
+  margin-top: 12px;
+}
+
+// .txt-list-dot ::before {
+//   content: "• ";
+//   color: #28323c;
+// }
+// letter-spacing 폰트 간격

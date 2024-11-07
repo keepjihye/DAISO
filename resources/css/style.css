@@ -3349,6 +3349,10 @@ input[type=checkbox] {
   border: 1px solid #000;
 }
 
+.inner {
+  width: 953px;
+}
+
 .tab-cont info {
   margin-top: 80px;
 }
@@ -3400,12 +3404,17 @@ input[type=checkbox] {
   padding: 16px 0 16px 24px;
   width: 260px;
   color: #c5c8ce;
+  font-size: 1.6rem;
   font-weight: 400;
   height: auto;
   display: inline;
 }
 
 .val {
+  word-wrap: break-word;
+  margin: 0;
+  white-space: 0;
+  word-break: break-all;
   min-height: auto;
   padding: 16px 24px 16px 48px;
   width: calc(100% - 260px);
@@ -3444,7 +3453,15 @@ input[type=checkbox] {
   font-weight: 700;
 }
 
-.txt-list-dot {
+.txt-list {
+  font-size: 1.6rem;
+  margin-top: 12px;
+  position: relative;
+  text-align: left;
+  word-break: keep-all;
+}
+
+.txt-list-dot li {
   margin: 12px 0 0;
   padding-left: 12px;
 }
@@ -3462,4 +3479,8 @@ input[type=checkbox] {
 .txt-list-dot li::before {
   content: "• ";
   color: #28323c;
+}
+
+.txt-list > li:nth-of-type(n + 2) {
+  margin-top: 12px;
 }/*# sourceMappingURL=style.css.map */
