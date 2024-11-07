@@ -3160,11 +3160,12 @@ input[type=text]::-ms-clear {
   height: 100%;
   padding: 0 30px;
   margin: 0 auto;
+  max-width: 1280px;
 }
 
 .content-section {
   height: 100%;
-  min-width: 1280px;
+  max-width: 1280px;
 }
 .content-section .product-riv__img {
   padding: 200px 0;
@@ -3617,7 +3618,7 @@ input[type=text]::-ms-clear {
 
 .product-wrap .inner {
   display: flex;
-  gap: 2%;
+  gap: 4%;
 }
 .product-wrap .product-cont {
   width: 70%;
@@ -4603,6 +4604,5 @@ input[type=text]::-ms-clear {
 }
 
 .info-list-data {
-  border-top: 2px solid #28323c;
   border-bottom: 1px solid #e9ebee;
 }/*# sourceMappingURL=style.css.map */
