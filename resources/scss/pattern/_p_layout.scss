@@ -85,37 +85,45 @@
     position: relative;
     .guide__tit {
         line-height: 21px;
+        font-weight: bold;
     }
-    .el-collapse-item {
+    .item-tit {
+        width: 100%;
+        p {
+            display: inline;
+        }
+    }
+    .el-collapse-item-1 {
         font-size: 16px;
         position: relative;
-        .ico-wrap {
+        .ico-wrap-1 {
             width: 20px;
             height: 20px;
             margin-right: 16px;
         }
-        .acco-tit em {
+        .acco-tit-1 em {
             color: #067dfd;
         }
-        .el-collapse-item__wrap {
+        .el-collapse-item__wrap-1 {
             font-size: 16px;
-            color: #646f7c;
+            color: #28323c;
             display: flex;
             padding: 10px 0;
             border-bottom: 1px solid $gray-10;
         }
-        .el-collapse-item__wrap-con {
+        .el-collapse-item__wrap-con-1 {
             display: none;
             width: 100%;
             height: 70px;
             background-color: $gray-5;
             padding: 24px 36px;
+            color: #646f7c;
             &.active {
                 display: block;
             }
         }
     }
-    .el-collapse-item__header {
+    .el-collapse-item__header-1 {
         font-size: 16px;
         position: relative;
         .ico-wrap {
@@ -123,7 +131,7 @@
             height: 20px;
             margin-right: 16px;
         }
-        .el-collapse-item__arrow {
+        .el-collapse-item__arrow-1 {
             p {
                 @include sr-only;
             }
@@ -133,16 +141,69 @@
                 font-weight: 900;
             }
         }
-        .el-collapse-item__wrap {
+        .el-collapse-item__wrap-1 {
             .inner-list a {
                 color: #067dfd;
             }
         }
     }
-    .item-tit {
+    .el-collapse-item-2 {
+        font-size: 16px;
+        position: relative;
+        .ico-wrap-2 {
+            width: 20px;
+            height: 20px;
+            margin-right: 16px;
+        }
+        .acco-tit-2 em {
+            color: #067dfd;
+        }
+        .el-collapse-item__wrap-2 {
+            width: 100%;
+            font-size: 16px;
+            color: #28323c;
+            display: flex;
+            padding: 10px 0;
+            border-bottom: 1px solid $gray-10;
+            .acco-tit-2 {
+                width: 92%;
+            }
+        }
+        .el-collapse-item__wrap-con-2 {
+            display: none;
+            width: 100%;
+            height: 230px;
+            background-color: $gray-5;
+            padding: 24px 36px;
+            color: #646f7c;
+            &.active {
+                display: block;
+            }
+        }
+    }
+    .el-collapse-item__header-2 {
         width: 100%;
-        p {
-            display: inline;
+        font-size: 16px;
+        position: relative;
+        .ico-wrap-2 {
+            width: 20px;
+            height: 20px;
+            margin-right: 16px;
+        }
+        .el-collapse-item__arrow-2 {
+            p {
+                @include sr-only;
+            }
+            &::after {
+                content: "\f107";
+                font-family: "Line Awesome Free";
+                font-weight: 900;
+            }
+        }
+        .el-collapse-item__wrap-con-2 {
+            .inner-list a {
+                color: #067dfd;
+            }
         }
     }
 }
@@ -159,7 +220,38 @@
         margin-top: 16px;
         gap: 10px;
     }
+    .el-button__pickup {
+        // display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 0;
+        padding-right: 20px;
+        &::after {
+            content: "\f105";
+            font-family: "Line Awesome Free";
+            font-weight: 900;
+            width: 20px;
+            height: 20px;
+        }
+    }
+    .el-button__order {
+        // display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 0;
+        padding-right: 20px;
+        &::after {
+            content: "\f105";
+            font-family: "Line Awesome Free";
+            font-weight: 900;
+            width: 20px;
+            height: 20px;
+        }
+    }
 }
+
 .el-radio-group {
     width: 100%;
     height: 100%;
@@ -202,6 +294,138 @@
                 display: block;
                 font-size: 1.4rem;
             }
+        }
+    }
+}
+.el-radio-group__2 {
+    .el-radio-button {
+        display: inline-block;
+        outline: 0;
+        position: relative;
+        width: 100%;
+        &::before {
+            background: url(https://cdn.daisomall.co.kr/apps/f/e8a827a9f/img/ico_purchase_pickup.3e0a9f5.png) no-repeat
+                0 0 / 50px 50px;
+            content: "";
+            height: 50px;
+            left: 50%;
+            position: absolute;
+            transform: translateX(-50%);
+            width: 50px;
+            z-index: 1;
+        }
+        .tit-h6 {
+            display: block;
+            margin-top: 58px;
+            text-align: center;
+            span {
+                display: block;
+                font-size: 1.4rem;
+            }
+        }
+    }
+}
+.el-radio-group__3 {
+    .el-radio-button {
+        display: inline-block;
+        outline: 0;
+        position: relative;
+        width: 100%;
+        &::before {
+            background: url(https://cdn.daisomall.co.kr/apps/f/e8a827a9f/img/ico_purchase_bulk.05529a6.png) no-repeat 0
+                0 / 50px 50px;
+            content: "";
+            height: 50px;
+            left: 50%;
+            position: absolute;
+            transform: translateX(-50%);
+            width: 50px;
+            z-index: 1;
+        }
+        .tit-h6 {
+            display: block;
+            margin-top: 58px;
+            text-align: center;
+            span {
+                display: block;
+                font-size: 1.4rem;
+            }
+        }
+    }
+}
+
+.delivery-set {
+    margin-top: 16px;
+    .addr-cont {
+        color: #28323c;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.4;
+    }
+    .info-item-1 {
+        border-bottom: 1px solid #e9ebee;
+        padding: 16px 0;
+        p {
+            &::before {
+                content: "\f041";
+                font-family: "Line Awesome Free";
+                font-weight: 900;
+                padding: 0 15px 0 0;
+                font-size: 23px;
+            }
+        }
+    }
+    .info-item-2 {
+        padding: 16px 0;
+        border-bottom: 1px solid #e9ebee;
+        position: relative;
+        align-items: center;
+        .info-item__large {
+            &::after {
+                background: url(https://cdn.daisomall.co.kr/apps/f/e8a827a9f/img/ico_delivery_tomorrow.160f044.svg)
+                    no-repeat 0 / auto 22px;
+                content: "";
+                display: inline-block;
+                padding-left: 75px;
+                height: 30px;
+                left: 22%;
+                bottom: 15px;
+                position: absolute;
+                width: 50px;
+                z-index: 1;
+            }
+        }
+        p {
+            &::before {
+                content: "\f46c";
+                font-family: "Line Awesome Free";
+                font-weight: 900;
+                padding: 0 15px 0 0;
+                font-size: 23px;
+            }
+        }
+    }
+    .info-item-3 {
+        padding: 16px 0;
+        border-bottom: 1px solid #e9ebee;
+        display: flex;
+        height: 76.79px;
+        position: relative;
+        .info-item__large__tit {
+            position: absolute;
+            top: 8px;
+            font-weight: bold;
+            &::before {
+                content: "\f0d1";
+                font-family: "Line Awesome Free";
+                font-weight: 900;
+                padding: 0 15px 0 0;
+                font-size: 23px;
+            }
+        }
+        .info-item__large__con {
+            position: absolute;
+            left: 100px;
         }
     }
 }
