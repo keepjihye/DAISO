@@ -308,20 +308,19 @@
 .inner {
   width: 953px;
 }
-.tab-cont info {
-  margin-top: 80px;
+.tab-cont {
 }
 .in-wrap {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   padding: 0 16px;
-  .tab-cont-info {
-    background-color: $white;
-    height: auto;
-    margin: 0;
-    position: relative;
-  }
+}
+.tab-cont-info {
+  background-color: #fff;
+  height: auto;
+  margin: 0;
+  position: relative;
 }
 .tit-area {
   align-items: flex-end;
@@ -330,25 +329,6 @@
   justify-content: space-between;
   margin: 24px 0 16px;
   position: relative;
-  .tit-h2 {
-    font-size: 2.8rem;
-    color: #161d24;
-    margin: 0;
-    min-width: 50%;
-    text-align: left;
-    display: block;
-    font-weight: 700;
-  }
-  .info-list {
-    font-size: 1.6rem;
-    line-height: 1.9rem;
-    .data {
-      border-bottom: 1px solid #e9ebee;
-      border-top: 2px solid #28323c;
-      margin: 16px 0 8px;
-      text-align: left;
-    }
-  }
 }
 .item {
   line-height: 24px;
@@ -360,6 +340,8 @@
   font-weight: 400;
   height: auto;
   display: inline;
+  letter-spacing: -1px;
+  $font-family-base: "Pretendard GOV";
 }
 .val {
   word-wrap: break-word;
@@ -375,6 +357,8 @@
   line-height: 19px;
   color: #28323c;
   font-weight: 400;
+  letter-spacing: -1px;
+  $font-family-base: "Pretendard GOV";
 }
 .info-list > li {
   display: flex;
@@ -398,6 +382,8 @@
   color: #161d24;
   display: block;
   font-weight: 700;
+  letter-spacing: -1px;
+  $font-family-base: "Pretendard GOV";
 }
 .txt-list {
   font-size: 1.6rem;
@@ -418,16 +404,34 @@
   display: block;
   margin-top: 12px;
 }
-.txt-list-dot li::before {
-  content: "• ";
-  color: #28323c;
+.txt-list-dot {
 }
 .txt-list > li:nth-of-type(n + 2) {
   margin-top: 12px;
 }
-
-// .txt-list-dot ::before {
-//   content: "• ";
-//   color: #28323c;
-// }
-// letter-spacing 폰트 간격
+.txt-list-dot1 {
+  font-size: 1.6rem;
+  margin-top: 12px;
+  padding-left: 12px;
+  position: relative;
+  text-align: left;
+  word-break: keep-all;
+}
+.txt-list-dot1::before {
+  background-color: #28323c;
+  color: #28323c;
+  font-size: 1.6rem;
+  border-radius: 50%;
+  content: "";
+  height: 4px;
+  left: 0;
+  position: absolute;
+  top: 10px;
+  width: 4px;
+  z-index: 1;
+  box-sizing: border-box;
+}
+.info-list-data {
+  border-top: 2px solid #28323c;
+  border-bottom: 1px solid #e9ebee;
+}

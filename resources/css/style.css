@@ -3353,17 +3353,14 @@ input[type=checkbox] {
   width: 953px;
 }
 
-.tab-cont info {
-  margin-top: 80px;
-}
-
 .in-wrap {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   padding: 0 16px;
 }
-.in-wrap .tab-cont-info {
+
+.tab-cont-info {
   background-color: #fff;
   height: auto;
   margin: 0;
@@ -3378,25 +3375,6 @@ input[type=checkbox] {
   margin: 24px 0 16px;
   position: relative;
 }
-.tit-area .tit-h2 {
-  font-size: 2.8rem;
-  color: #161d24;
-  margin: 0;
-  min-width: 50%;
-  text-align: left;
-  display: block;
-  font-weight: 700;
-}
-.tit-area .info-list {
-  font-size: 1.6rem;
-  line-height: 1.9rem;
-}
-.tit-area .info-list .data {
-  border-bottom: 1px solid #e9ebee;
-  border-top: 2px solid #28323c;
-  margin: 16px 0 8px;
-  text-align: left;
-}
 
 .item {
   line-height: 24px;
@@ -3408,6 +3386,7 @@ input[type=checkbox] {
   font-weight: 400;
   height: auto;
   display: inline;
+  letter-spacing: -1px;
 }
 
 .val {
@@ -3424,6 +3403,7 @@ input[type=checkbox] {
   line-height: 19px;
   color: #28323c;
   font-weight: 400;
+  letter-spacing: -1px;
 }
 
 .info-list > li {
@@ -3451,6 +3431,7 @@ input[type=checkbox] {
   color: #161d24;
   display: block;
   font-weight: 700;
+  letter-spacing: -1px;
 }
 
 .txt-list {
@@ -3461,7 +3442,7 @@ input[type=checkbox] {
   word-break: keep-all;
 }
 
-.txt-list-dot li {
+.txt-list-dot > li {
   margin: 12px 0 0;
   padding-left: 12px;
 }
@@ -3476,11 +3457,35 @@ input[type=checkbox] {
   margin-top: 12px;
 }
 
-.txt-list-dot li::before {
-  content: "• ";
-  color: #28323c;
-}
-
 .txt-list > li:nth-of-type(n + 2) {
   margin-top: 12px;
+}
+
+.txt-list-dot1 {
+  font-size: 1.6rem;
+  margin-top: 12px;
+  padding-left: 12px;
+  position: relative;
+  text-align: left;
+  word-break: keep-all;
+}
+
+.txt-list-dot1::before {
+  background-color: #28323c;
+  color: #28323c;
+  font-size: 1.6rem;
+  border-radius: 50%;
+  content: "";
+  height: 4px;
+  left: 0;
+  position: absolute;
+  top: 10px;
+  width: 4px;
+  z-index: 1;
+  box-sizing: border-box;
+}
+
+.info-list-data {
+  border-top: 2px solid #28323c;
+  border-bottom: 1px solid #e9ebee;
 }/*# sourceMappingURL=style.css.map */
