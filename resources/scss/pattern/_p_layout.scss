@@ -1,21 +1,6 @@
 // 그리드
 .inner {
     width: 100%;
-<<<<<<< HEAD
-    max-width: $grid;
-    height: 100%;
-    // content를 1280px로 만들기 위함
-    padding: 0 $p-mobile;
-    margin: 0 auto;
-    @include tabletMore {
-        padding: 0 $p-tablet;
-    }
-}
-
-.goods-thumb-wrap {
-    width: 570px;
-    height: 100%;
-=======
     height: 100%;
     padding: 0 $p-tablet;
     margin: 0 auto;
@@ -1155,5 +1140,4 @@
             width: 68%;
         }
     }
->>>>>>> 50a78ed16b6bcaacf649407ac26747b95f75204f
 }
